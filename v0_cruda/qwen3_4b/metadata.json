@@ -1,0 +1,20 @@
+{
+  "modelo": "qwen3:4b",
+  "digest_modelo": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "think": true,
+  "opciones": {
+    "num_ctx": 32768,
+    "num_predict": 24000
+  },
+  "inicio": "2026-11-23T23:01:09-03:00",
+  "duracion_s": 390.9,
+  "tokens_prompt": 4111,
+  "tokens_generados": 9166,
+  "motivo_termino": "stop",
+  "caracteres_razonamiento": 31940,
+  "caracteres_respuesta": 5117,
+  "hay_bloque_python": true,
+  "sha256_prompt": "77fb6ed99bed88309a996dadaa849b899fb36e1c249be3b2079c360227db19a3",
+  "sha256_respuesta": "cf7ab4247ee456b5a96955ef946aa1071e549f7490987f5d2a4a15fc834301bc",
+  "sha256_codigo": "d0fbcef24a0eb66ca0c7d278db5c4687270ee0bdde75f9c835506594a827abc3"
+}
