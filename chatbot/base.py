@@ -78,10 +78,10 @@ class Base:
         dia = date.fromisoformat(fecha_iso).weekday()
         return "sabado_domingo_festivos" if dia >= 5 else "lunes_a_viernes"
 
-    def servicios(self, origen, destino, fecha_iso=None):
-        """Lista de (salida en origen, llegada a destino) para ese día."""
+    def servicios(self, origen, destino, fecha_iso=None, tipo=None):
+        """Lista de (salida en origen, llegada a destino) para una fecha o un tipo de día."""
         sentido = self.sentido(origen, destino)
-        tabla = self.datos["horarios"][sentido][self.tipo_dia(fecha_iso)]
+        tabla = self.datos["horarios"][sentido][tipo or self.tipo_dia(fecha_iso)]
         return [(s[origen], s[destino]) for s in tabla]
 
     def minutos_viaje(self, origen, destino):
