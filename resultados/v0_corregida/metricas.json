@@ -1,0 +1,433 @@
+{
+  "conversaciones": 62,
+  "turnos": 153,
+  "errores_de_ejecucion": 0,
+  "segundos_por_turno": 95.71810457516341,
+  "intencion": {
+    "accuracy": 0.7712418300653595,
+    "macro_f1": 0.7732774775661706,
+    "por_clase": {
+      "saludo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 6
+      },
+      "despedida": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 16
+      },
+      "comprar_pasaje": {
+        "precision": 0.8888888888888888,
+        "recall": 0.6956521739130435,
+        "f1": 0.7804878048780488,
+        "soporte": 46
+      },
+      "consultar_horario": {
+        "precision": 0.6875,
+        "recall": 1.0,
+        "f1": 0.8148148148148148,
+        "soporte": 11
+      },
+      "consultar_precio": {
+        "precision": 0.8461538461538461,
+        "recall": 0.8461538461538461,
+        "f1": 0.8461538461538461,
+        "soporte": 13
+      },
+      "cambiar_pasaje": {
+        "precision": 0.9,
+        "recall": 0.6428571428571429,
+        "f1": 0.75,
+        "soporte": 14
+      },
+      "devolver_pasaje": {
+        "precision": 1.0,
+        "recall": 0.5833333333333334,
+        "f1": 0.7368421052631579,
+        "soporte": 12
+      },
+      "equipaje_mascotas": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1": 0.8235294117647058,
+        "soporte": 10
+      },
+      "estado_tren": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "soporte": 5
+      },
+      "reclamo": {
+        "precision": 0.5454545454545454,
+        "recall": 0.6,
+        "f1": 0.5714285714285713,
+        "soporte": 10
+      },
+      "fuera_de_alcance": {
+        "precision": 0.38095238095238093,
+        "recall": 0.8,
+        "f1": 0.5161290322580645,
+        "soporte": 10
+      }
+    },
+    "confusion": {
+      "cambiar_pasaje -> consultar_precio": 1,
+      "cambiar_pasaje -> estado_tren": 1,
+      "cambiar_pasaje -> fuera_de_alcance": 3,
+      "comprar_pasaje -> cambiar_pasaje": 1,
+      "comprar_pasaje -> consultar_horario": 5,
+      "comprar_pasaje -> fuera_de_alcance": 6,
+      "comprar_pasaje -> reclamo": 2,
+      "consultar_precio -> comprar_pasaje": 2,
+      "devolver_pasaje -> estado_tren": 1,
+      "devolver_pasaje -> fuera_de_alcance": 1,
+      "devolver_pasaje -> reclamo": 3,
+      "equipaje_mascotas -> consultar_precio": 1,
+      "equipaje_mascotas -> fuera_de_alcance": 2,
+      "fuera_de_alcance -> comprar_pasaje": 1,
+      "fuera_de_alcance -> estado_tren": 1,
+      "reclamo -> comprar_pasaje": 1,
+      "reclamo -> estado_tren": 2,
+      "reclamo -> fuera_de_alcance": 1
+    }
+  },
+  "intencion_por_tema": {
+    "cambiar_pasaje": 0.5833333333333334,
+    "comprar_pasaje": 0.7446808510638298,
+    "consultar_horario": 1.0,
+    "consultar_precio": 0.8461538461538461,
+    "devolver_pasaje": 0.6,
+    "equipaje_mascotas": 0.625,
+    "estado_tren": 1.0,
+    "fuera_de_alcance": 0.8,
+    "mixta": 0.875,
+    "reclamo": 0.5555555555555556,
+    "saludo": 1.0
+  },
+  "datos": {
+    "precision": 0.9166666666666666,
+    "recall": 0.8341232227488151,
+    "f1": 0.8734491315136476,
+    "por_campo": {
+      "origen": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 29
+      },
+      "destino": {
+        "precision": 0.9714285714285714,
+        "recall": 1.0,
+        "f1": 0.9855072463768115,
+        "soporte": 34
+      },
+      "fecha": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 25
+      },
+      "hora": {
+        "precision": 0.9473684210526315,
+        "recall": 1.0,
+        "f1": 0.972972972972973,
+        "soporte": 18
+      },
+      "pasajeros": {
+        "precision": 0.9285714285714286,
+        "recall": 0.8125,
+        "f1": 0.8666666666666666,
+        "soporte": 16
+      },
+      "tarifa": {
+        "precision": 0.9285714285714286,
+        "recall": 0.7222222222222222,
+        "f1": 0.8125000000000001,
+        "soporte": 18
+      },
+      "clase": {
+        "precision": 1.0,
+        "recall": 0.9375,
+        "f1": 0.967741935483871,
+        "soporte": 16
+      },
+      "rut": {
+        "precision": 1.0,
+        "recall": 0.9615384615384616,
+        "f1": 0.9803921568627451,
+        "soporte": 26
+      },
+      "correo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 14
+      },
+      "codigo_reserva": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 12
+      },
+      "nombre": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 3
+      }
+    },
+    "errores": [
+      {
+        "id": "C01-3",
+        "campo": "fecha",
+        "real": "2026-11-27",
+        "predicho": "viernes"
+      },
+      {
+        "id": "C01-4",
+        "campo": "tarifa",
+        "real": "adulto",
+        "predicho": null
+      },
+      {
+        "id": "C02-1",
+        "campo": "fecha",
+        "real": "2026-12-03",
+        "predicho": "2023-12-03"
+      },
+      {
+        "id": "C03-2",
+        "campo": "fecha",
+        "real": "2026-11-25",
+        "predicho": "mañana"
+      },
+      {
+        "id": "C04-2",
+        "campo": "fecha",
+        "real": "2026-11-28",
+        "predicho": null
+      },
+      {
+        "id": "C05-1",
+        "campo": "fecha",
+        "real": "2026-11-30",
+        "predicho": "2023-11-30"
+      },
+      {
+        "id": "C05-3",
+        "campo": "pasajeros",
+        "real": null,
+        "predicho": 3
+      },
+      {
+        "id": "C06-2",
+        "campo": "fecha",
+        "real": "2026-11-25",
+        "predicho": "2023-10-06"
+      },
+      {
+        "id": "C06-4",
+        "campo": "tarifa",
+        "real": "adulto",
+        "predicho": null
+      },
+      {
+        "id": "C07-1",
+        "campo": "fecha",
+        "real": "2026-11-29",
+        "predicho": null
+      },
+      {
+        "id": "C08-1",
+        "campo": "fecha",
+        "real": "2026-12-10",
+        "predicho": "2023-12-10"
+      },
+      {
+        "id": "C09-1",
+        "campo": "fecha",
+        "real": "2027-01-15",
+        "predicho": "2024-01-15"
+      },
+      {
+        "id": "C10-3",
+        "campo": "fecha",
+        "real": "2026-11-30",
+        "predicho": null
+      },
+      {
+        "id": "C11-2",
+        "campo": "fecha",
+        "real": "2026-11-26",
+        "predicho": null
+      },
+      {
+        "id": "C11-3",
+        "campo": "pasajeros",
+        "real": 1,
+        "predicho": null
+      },
+      {
+        "id": "C13-1",
+        "campo": "fecha",
+        "real": "2026-11-28",
+        "predicho": "sábado"
+      },
+      {
+        "id": "C15-1",
+        "campo": "fecha",
+        "real": "2026-11-25",
+        "predicho": null
+      },
+      {
+        "id": "C16-2",
+        "campo": "destino",
+        "real": null,
+        "predicho": "Linares"
+      },
+      {
+        "id": "C17-1",
+        "campo": "fecha",
+        "real": "2026-11-30",
+        "predicho": "2024-01-06"
+      },
+      {
+        "id": "C17-1",
+        "campo": "hora",
+        "real": null,
+        "predicho": "15:00"
+      },
+      {
+        "id": "C19-1",
+        "campo": "tarifa",
+        "real": "estudiante",
+        "predicho": null
+      },
+      {
+        "id": "C21-2",
+        "campo": "tarifa",
+        "real": null,
+        "predicho": "nino"
+      },
+      {
+        "id": "C22-1",
+        "campo": "tarifa",
+        "real": "estudiante",
+        "predicho": null
+      },
+      {
+        "id": "C22-2",
+        "campo": "tarifa",
+        "real": "adulto_mayor",
+        "predicho": null
+      },
+      {
+        "id": "C23-2",
+        "campo": "clase",
+        "real": "preferente",
+        "predicho": null
+      },
+      {
+        "id": "C24-3",
+        "campo": "fecha",
+        "real": "2026-12-05",
+        "predicho": "2023-12-05"
+      },
+      {
+        "id": "C25-2",
+        "campo": "fecha",
+        "real": "2026-11-27",
+        "predicho": null
+      },
+      {
+        "id": "C25-2",
+        "campo": "rut",
+        "real": "19456321-3",
+        "predicho": null
+      },
+      {
+        "id": "C27-1",
+        "campo": "fecha",
+        "real": "2026-11-25",
+        "predicho": null
+      },
+      {
+        "id": "C28-1",
+        "campo": "fecha",
+        "real": "2026-11-26",
+        "predicho": null
+      },
+      {
+        "id": "C30-1",
+        "campo": "fecha",
+        "real": "2026-11-25",
+        "predicho": null
+      },
+      {
+        "id": "C40-1",
+        "campo": "fecha",
+        "real": "2026-11-24",
+        "predicho": "hoy"
+      },
+      {
+        "id": "C42-1",
+        "campo": "fecha",
+        "real": "2026-11-25",
+        "predicho": null
+      },
+      {
+        "id": "C55-3",
+        "campo": "fecha",
+        "real": "2026-11-27",
+        "predicho": null
+      },
+      {
+        "id": "C55-4",
+        "campo": "pasajeros",
+        "real": 1,
+        "predicho": null
+      },
+      {
+        "id": "C56-2",
+        "campo": "fecha",
+        "real": "2026-11-29",
+        "predicho": null
+      },
+      {
+        "id": "C57-1",
+        "campo": "fecha",
+        "real": "2026-11-25",
+        "predicho": null
+      },
+      {
+        "id": "C59-3",
+        "campo": "fecha",
+        "real": "2026-12-01",
+        "predicho": "2023-12-01"
+      },
+      {
+        "id": "C59-3",
+        "campo": "pasajeros",
+        "real": 1,
+        "predicho": null
+      }
+    ]
+  },
+  "respuestas": {
+    "respuestas": 153,
+    "tasa_inventadas": 0.0,
+    "respuestas_con_invento": 0,
+    "inventos_por_tipo": {},
+    "respuestas_evasivas": 21,
+    "preguntas_sin_informacion_ignoradas": 14,
+    "abstencion_correcta": 0.0,
+    "preguntas_sin_informacion": 14,
+    "cobertura_menciones": 0.015151515151515152,
+    "turnos_con_mencion_completa": 0.01639344262295082,
+    "detalle_inventos": []
+  }
+}

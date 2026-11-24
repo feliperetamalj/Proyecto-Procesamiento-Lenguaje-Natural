@@ -1,0 +1,19 @@
+{
+  "sistema": "v0_corregida",
+  "descripcion": "Revisión a mano de las 153 respuestas de la v0 corregida en las conversaciones de prueba. Como sus respuestas son textos fijos, revisé cada uno de los 31 textos distintos contra la base de conocimiento.",
+  "respuestas": 153,
+  "inventadas": 3,
+  "detector_automatico_marco": 0,
+  "detalle": [
+    {
+      "ids": ["C02-2", "C05-4", "C08-3"],
+      "respuesta": "¡Gracias por su compra! Tu pasaje será confirmado en 30 minutos. Recuerda revisar tu correo para el enlace de pago.",
+      "problema": "La base dice que lo que vence en 30 minutos es el enlace de pago; no hay una confirmación del pasaje en 30 minutos. El detector no lo marca porque el número 30 sí está en la base."
+    }
+  ],
+  "otras_observaciones": {
+    "no_entiendo": 21,
+    "textos_de_relleno": 36,
+    "nota": "Los textos de relleno (\"[Listado de horarios en la base de conocimiento]\", \"[Datos de tarifas en la base de conocimiento]\" y \"[Información en base de conocimiento]\") no afirman nada falso, pero tampoco contestan. El teléfono, el correo y la página de estado que menciona sí están en la base."
+  }
+}
