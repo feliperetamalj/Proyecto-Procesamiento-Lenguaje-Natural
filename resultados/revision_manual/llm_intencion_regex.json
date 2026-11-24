@@ -1,0 +1,70 @@
+{
+  "sistema": "llm_intencion_regex (versión final)",
+  "descripcion": "Revisión a mano de las 153 respuestas de la versión final en las conversaciones de prueba. Busqué datos falsos o que no estén en la base y respuestas que no contestan la pregunta.",
+  "respuestas": 153,
+  "con_datos_inventados": 0,
+  "errores_de_intencion": 10,
+  "nota": "Cuando el asistente dice que registró un cambio o un reclamo, eso solo queda en el estado de la conversación: no hay un sistema de reservas real detrás.",
+  "detalle": [
+    {
+      "id": "C07-3",
+      "usuario": "Nos sirve el de las 15:30, en estándar",
+      "intencion_predicha": "consultar_horario",
+      "efecto": "repite los horarios en vez de seguir la compra; el turno siguiente la completa bien"
+    },
+    {
+      "id": "C42-1",
+      "usuario": "¿Hay paro de trenes mañana?",
+      "intencion_predicha": "consultar_horario",
+      "efecto": "pide estaciones para mostrar horarios en vez de decir que no tiene información en tiempo real"
+    },
+    {
+      "id": "C46-1",
+      "usuario": "Me cobraron dos veces el pasaje, necesito que me devuelvan la plata",
+      "intencion_predicha": "devolver_pasaje",
+      "efecto": "lo trata como devolución y pide el código"
+    },
+    {
+      "id": "C46-2",
+      "usuario": "El código es RS-44120, mi correo es d.castro@gmail.com",
+      "intencion_predicha": "devolver_pasaje",
+      "efecto": "sigue la devolución y pide el RUT"
+    },
+    {
+      "id": "C47-1",
+      "usuario": "¿Los trenes tienen wifi?",
+      "intencion_predicha": "equipaje_mascotas",
+      "efecto": "responde con la política de equipaje"
+    },
+    {
+      "id": "C47-2",
+      "usuario": "¿Y hay enchufes en los asientos?",
+      "intencion_predicha": "equipaje_mascotas",
+      "efecto": "responde con la política de equipaje"
+    },
+    {
+      "id": "C53-1",
+      "usuario": "¿El tren tiene acceso para silla de ruedas?",
+      "intencion_predicha": "equipaje_mascotas",
+      "efecto": "responde con la política de equipaje; la base sí tiene la información de accesibilidad"
+    },
+    {
+      "id": "C54-1",
+      "usuario": "¿Puedo comprar con ustedes un pasaje de bus a Concepción?",
+      "intencion_predicha": "comprar_pasaje",
+      "efecto": "la respuesta igual es correcta: no hay servicio a Concepción"
+    },
+    {
+      "id": "C55-4",
+      "usuario": "Ya, cómprame uno para el de las 18:30, adulto, estándar",
+      "intencion_predicha": "consultar_horario",
+      "efecto": "repite los horarios; el turno siguiente completa la compra"
+    },
+    {
+      "id": "C56-1",
+      "usuario": "Buenas, quiero comprar un pasaje a Chillán pero antes, ¿puedo llevar a mi gata?",
+      "intencion_predicha": "comprar_pasaje",
+      "efecto": "pregunta la estación de origen y no contesta lo de la gata"
+    }
+  ]
+}
