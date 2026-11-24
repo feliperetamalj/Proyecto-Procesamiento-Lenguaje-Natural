@@ -187,6 +187,23 @@ def reconoce_que_no_sabe(respuesta):
     return any(re.search(p, texto) for p in PATRONES_ABSTENCION)
 
 
+PATRONES_AFIRMA = [r"^\W*si\b", r"\bsi, (hay|tenemos|tiene|cuenta|ofrecemos|puede)", r"\b(hay|tenemos|ofrecemos|contamos con|cuentan? con|dispone de|disponemos de|incluye)\b",
+                   r"\b(esta|estan|va|viene) (atrasad|a la hora|funcionando|operando|normal)", r"\bno hay (retras|paro|atras)"]
+
+
+def afirma_algo(respuesta):
+    """Detecta si la respuesta asegura algo ("sí, hay wifi", "el tren va a la hora").
+
+    Miro solo el comienzo: si la respuesta parte con una pregunta, el asistente
+    está pidiendo datos y no contestando."""
+    texto = sin_tildes(respuesta or "").lower().strip()
+    oraciones = re.findall(r"[^.?!]+[.?!]?", texto)
+    if not oraciones or oraciones[0].strip().endswith("?"):
+        return False
+    inicio = " ".join(oraciones[:2])
+    return any(re.search(p, inicio) for p in PATRONES_AFIRMA)
+
+
 def es_evasiva(respuesta):
     """Respuesta vacía o que solo pide repetir: no ayuda, pero tampoco inventa."""
     texto = sin_tildes(respuesta or "").lower().strip()

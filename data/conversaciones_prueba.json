@@ -25,7 +25,7 @@
       {"usuario": "jp.soto@hotmail.com", "intencion": "comprar_pasaje", "datos": {"correo": "jp.soto@hotmail.com"}, "debe_mencionar": ["3.300"]}
     ]},
     {"id": "C04", "tema": "comprar_pasaje", "turnos": [
-      {"usuario": "Buenos días. Quiero comprar un pasaje para mi mamá, que tiene 72 años", "intencion": "comprar_pasaje", "datos": {"pasajeros": 1, "tarifa": "adulto_mayor"}},
+      {"usuario": "Buenos días. Quiero comprar 1 pasaje para mi mamá, que tiene 72 años", "intencion": "comprar_pasaje", "datos": {"pasajeros": 1, "tarifa": "adulto_mayor"}},
       {"usuario": "Va de Chillán a Santiago el sábado en la mañana, en el de las 9", "intencion": "comprar_pasaje", "datos": {"origen": "Chillán", "destino": "Santiago", "fecha": "2026-11-28", "hora": "09:00"}},
       {"usuario": "Clase estándar. Ella se llama Rosa Muñoz", "intencion": "comprar_pasaje", "datos": {"clase": "estandar", "nombre": "Rosa Muñoz"}},
       {"usuario": "Mi rut es 13.579.246-2 y el correo rosa.munoz@yahoo.com", "intencion": "comprar_pasaje", "datos": {"rut": "13579246-2", "correo": "rosa.munoz@yahoo.com"}, "debe_mencionar": ["6.180"]}
@@ -78,7 +78,7 @@
     ]},
     {"id": "C13", "tema": "consultar_horario", "turnos": [
       {"usuario": "Hola, qué horarios tienen de Talca a Santiago el sábado", "intencion": "consultar_horario", "datos": {"origen": "Talca", "destino": "Santiago", "fecha": "2026-11-28"}, "debe_mencionar": ["10:30", "15:00", "19:30"]},
-      {"usuario": "Y el último llega a Santiago a qué hora?", "intencion": "consultar_horario", "datos": {}, "debe_mencionar": ["22:00"]}
+      {"usuario": "Y el último llega a Santiago a qué hora?", "intencion": "consultar_horario", "datos": {"destino": "Santiago"}, "debe_mencionar": ["22:00"]}
     ]},
     {"id": "C14", "tema": "consultar_horario", "turnos": [
       {"usuario": "Buenas, cuánto se demora el tren de Santiago a Talca?", "intencion": "consultar_horario", "datos": {"origen": "Santiago", "destino": "Talca"}, "debe_mencionar": [["150 minutos", "2 horas y 30", "2 horas 30", "dos horas y media", "2 horas y media", "2:30", "2 h 30"]]}
@@ -117,7 +117,7 @@
       {"usuario": "Gracias", "intencion": "despedida", "datos": {}}
     ]},
     {"id": "C23", "tema": "consultar_precio", "turnos": [
-      {"usuario": "¿Cuánto vale el pasaje de Talca a Linares un domingo?", "intencion": "consultar_precio", "datos": {"origen": "Talca", "destino": "Linares", "fecha": "2026-11-29"}, "debe_mencionar": ["2.600"]},
+      {"usuario": "¿Cuánto vale el pasaje de Talca a Linares un domingo?", "intencion": "consultar_precio", "datos": {"origen": "Talca", "destino": "Linares"}, "debe_mencionar": ["2.600"]},
       {"usuario": "¿Y en preferente?", "intencion": "consultar_precio", "datos": {"clase": "preferente"}, "debe_mencionar": ["4.200"]}
     ]},
     {"id": "C24", "tema": "cambiar_pasaje", "turnos": [
@@ -148,7 +148,7 @@
       {"usuario": "¿En cuánto tiempo me llega la plata?", "intencion": "devolver_pasaje", "datos": {}, "debe_mencionar": [["10 días", "diez días"]]}
     ]},
     {"id": "C30", "tema": "devolver_pasaje", "turnos": [
-      {"usuario": "Hola, ya no voy a poder viajar mañana, quiero anular el pasaje RS-58077", "intencion": "devolver_pasaje", "datos": {"codigo_reserva": "RS-58077"}},
+      {"usuario": "Hola, ya no voy a poder viajar mañana, quiero anular el pasaje RS-58077", "intencion": "devolver_pasaje", "datos": {"codigo_reserva": "RS-58077", "fecha": "2026-11-25"}},
       {"usuario": "Mi rut es 20.114.587-2", "intencion": "devolver_pasaje", "datos": {"rut": "20114587-2"}}
     ]},
     {"id": "C31", "tema": "devolver_pasaje", "turnos": [
@@ -233,7 +233,7 @@
       {"usuario": "¿El tren tiene acceso para silla de ruedas?", "intencion": "fuera_de_alcance", "datos": {}, "debe_mencionar": [["48 horas", "48 h"]]}
     ]},
     {"id": "C54", "tema": "fuera_de_alcance", "turnos": [
-      {"usuario": "¿Puedo comprar con ustedes un pasaje de bus a Concepción?", "intencion": "fuera_de_alcance", "datos": {}, "sin_informacion": true}
+      {"usuario": "¿Puedo comprar con ustedes un pasaje de bus a Concepción?", "intencion": "fuera_de_alcance", "datos": {"destino": "Concepción"}, "sin_informacion": true}
     ]},
     {"id": "C55", "tema": "mixta", "turnos": [
       {"usuario": "Hola, buenas noches", "intencion": "saludo", "datos": {}},

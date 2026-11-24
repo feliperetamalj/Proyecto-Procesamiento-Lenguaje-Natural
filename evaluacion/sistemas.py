@@ -44,6 +44,11 @@ def sistema_v0():
     return modulo.procesar_turno
 
 
+def sistema_v0_corregida():
+    ruta = RAIZ / "versiones" / "v0_corregida" / "chatbot.py"
+    return _cargar_modulo(ruta, "chatbot_v0_corregida").procesar_turno
+
+
 def sistema_asistente(config):
     from chatbot.asistente import Asistente
     return Asistente(**config).procesar_turno
@@ -52,17 +57,22 @@ def sistema_asistente(config):
 # Configuraciones que se comparan en el informe. Cada una cambia una sola pieza
 # respecto de la anterior, para que se vea qué aporta cada cambio.
 CONFIGURACIONES = {
+    # Comprensión: cómo se detecta la intención y se extraen los datos.
     "reglas": {"intenciones": "reglas", "extraccion": "regex", "respuestas": "plantillas"},
     "tfidf": {"intenciones": "tfidf", "extraccion": "regex", "respuestas": "plantillas"},
+    "tfidf_sin_contexto": {"intenciones": "tfidf", "extraccion": "regex", "respuestas": "plantillas", "contexto": False},
     "llm_nlu": {"intenciones": "llm", "extraccion": "llm", "respuestas": "plantillas"},
+    "llm_intencion_regex": {"intenciones": "llm", "extraccion": "regex", "respuestas": "plantillas"},
+    # Respuestas: plantillas contra un LLM que redacta con la base en el prompt.
     "llm_respuestas": {"intenciones": "tfidf", "extraccion": "regex", "respuestas": "llm"},
-    "v1": {"intenciones": "tfidf", "extraccion": "regex", "respuestas": "plantillas", "contexto": True},
 }
 
 
 def obtener(nombre):
     if nombre == "v0":
         return sistema_v0()
+    if nombre == "v0_corregida":
+        return sistema_v0_corregida()
     if nombre in CONFIGURACIONES:
         return sistema_asistente(CONFIGURACIONES[nombre])
     raise SystemExit(f"Sistema desconocido: {nombre}")

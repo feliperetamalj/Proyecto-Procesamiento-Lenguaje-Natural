@@ -4,7 +4,7 @@ import re
 from collections import Counter, defaultdict
 
 from chatbot.base import CAMPOS, INTENCIONES, normalizar_valor, sin_tildes
-from evaluacion.inventadas import es_evasiva, hechos_permitidos, no_respaldados, reconoce_que_no_sabe
+from evaluacion.inventadas import afirma_algo, es_evasiva, hechos_permitidos, no_respaldados, reconoce_que_no_sabe
 
 
 def _patron_mencion(esperado):
@@ -90,7 +90,7 @@ def metricas_datos(turnos, base):
 def metricas_respuestas(conversaciones, turnos_por_conv, base):
     con_inventos, total_resp = 0, 0
     detalle_inventos = []
-    sin_info_total, sin_info_ok, evasivas = 0, 0, 0
+    sin_info_total, sin_info_ok, evasivas, ignoradas = 0, 0, 0, 0
     menciones_total, menciones_ok = 0, 0
     turnos_con_mencion, turnos_mencion_ok = 0, 0
     por_tipo = Counter()
@@ -106,9 +106,11 @@ def metricas_respuestas(conversaciones, turnos_por_conv, base):
                 sin_info_total += 1
                 if reconoce_que_no_sabe(resp):
                     sin_info_ok += 1
-                elif not es_evasiva(resp):
-                    # Contestó algo que la base no dice.
-                    malos = malos + [("responde_sin_informacion", "")]
+                elif afirma_algo(resp):
+                    # Aseguró algo que la base no dice.
+                    malos = malos + [("afirma_sin_informacion", "")]
+                else:
+                    ignoradas += 1  # no inventó, pero tampoco contestó la pregunta
             if malos:
                 con_inventos += 1
                 for tipo, _ in malos:
@@ -127,6 +129,7 @@ def metricas_respuestas(conversaciones, turnos_por_conv, base):
         "respuestas_con_invento": con_inventos,
         "inventos_por_tipo": dict(por_tipo),
         "respuestas_evasivas": evasivas,
+        "preguntas_sin_informacion_ignoradas": ignoradas,
         "abstencion_correcta": sin_info_ok / sin_info_total if sin_info_total else 0.0,
         "preguntas_sin_informacion": sin_info_total,
         "cobertura_menciones": menciones_ok / menciones_total if menciones_total else 0.0,

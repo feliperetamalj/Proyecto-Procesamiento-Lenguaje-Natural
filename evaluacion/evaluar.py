@@ -97,24 +97,27 @@ def main():
     ap.add_argument("--sistema", required=True)
     ap.add_argument("--ids", nargs="*", help="solo estas conversaciones")
     ap.add_argument("--reanudar", action="store_true")
+    ap.add_argument("--solo-metricas", action="store_true", help="recalcula sin volver a correr el sistema")
+    ap.add_argument("--conversaciones", default=str(RUTA_CONVERSACIONES), help="archivo de conversaciones")
+    ap.add_argument("--salida", help="carpeta de resultados (por defecto resultados/<sistema>)")
     args = ap.parse_args()
 
-    datos = json.loads(RUTA_CONVERSACIONES.read_text(encoding="utf-8"))
+    datos = json.loads(Path(args.conversaciones).read_text(encoding="utf-8"))
     conversaciones = [c for c in datos["conversaciones"] if not args.ids or c["id"] in args.ids]
-    salida = RAIZ / "resultados" / args.sistema
+    salida = Path(args.salida) if args.salida else RAIZ / "resultados" / args.sistema
     salida.mkdir(parents=True, exist_ok=True)
     ruta_pred = salida / "predicciones.jsonl"
 
     hechas = []
-    if args.reanudar and ruta_pred.exists():
+    if (args.reanudar or args.solo_metricas) and ruta_pred.exists():
         hechas = [json.loads(l) for l in ruta_pred.read_text(encoding="utf-8").splitlines() if l.strip()]
     else:
         ruta_pred.write_text("", encoding="utf-8")
     listas = {p["conversacion"] for p in hechas}
 
-    procesar = obtener(args.sistema)
+    procesar = None if args.solo_metricas else obtener(args.sistema)
     for conv in conversaciones:
-        if conv["id"] in listas:
+        if conv["id"] in listas or procesar is None:
             continue
         t0 = time.time()
         turnos = correr_conversacion(procesar, conv, datos["fecha_hoy"])

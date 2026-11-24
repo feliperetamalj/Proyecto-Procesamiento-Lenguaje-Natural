@@ -115,7 +115,7 @@
         "precision": 0.0,
         "recall": 0.0,
         "f1": 0.0,
-        "soporte": 32
+        "soporte": 34
       },
       "fecha": {
         "precision": 0.0,
@@ -798,6 +798,12 @@
         "predicho": null
       },
       {
+        "id": "C13-2",
+        "campo": "destino",
+        "real": "Santiago",
+        "predicho": null
+      },
+      {
         "id": "C14-1",
         "campo": "origen",
         "real": "Santiago",
@@ -972,12 +978,6 @@
         "predicho": null
       },
       {
-        "id": "C23-1",
-        "campo": "fecha",
-        "real": "2026-11-29",
-        "predicho": null
-      },
-      {
         "id": "C23-2",
         "campo": "clase",
         "real": "preferente",
@@ -1077,6 +1077,12 @@
         "id": "C29-2",
         "campo": "codigo_reserva",
         "real": "RS-44120",
+        "predicho": null
+      },
+      {
+        "id": "C30-1",
+        "campo": "fecha",
+        "real": "2026-11-25",
         "predicho": null
       },
       {
@@ -1227,6 +1233,12 @@
         "id": "C48-1",
         "campo": "destino",
         "real": "Puerto Montt",
+        "predicho": null
+      },
+      {
+        "id": "C54-1",
+        "campo": "destino",
+        "real": "Concepción",
         "predicho": null
       },
       {
@@ -1435,6 +1447,7 @@
     "respuestas_con_invento": 0,
     "inventos_por_tipo": {},
     "respuestas_evasivas": 153,
+    "preguntas_sin_informacion_ignoradas": 14,
     "abstencion_correcta": 0.0,
     "preguntas_sin_informacion": 14,
     "cobertura_menciones": 0.0,
