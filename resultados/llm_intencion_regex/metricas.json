@@ -2,7 +2,7 @@
   "conversaciones": 62,
   "turnos": 153,
   "errores_de_ejecucion": 0,
-  "segundos_por_turno": 5.4141176470588235,
+  "segundos_por_turno": 1.6938562091503269,
   "intencion": {
     "accuracy": 0.934640522875817,
     "macro_f1": 0.9186871143788141,

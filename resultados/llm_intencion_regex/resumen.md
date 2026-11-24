@@ -13,4 +13,4 @@
 | Respuestas evasivas (vacías o "no entiendo") | 0 |
 | Reconoce cuando no sabe | 0.786 de 14 |
 | Datos esperados que menciona | 0.970 |
-| Segundos por turno | 5.41 |
+| Segundos por turno | 1.69 |
