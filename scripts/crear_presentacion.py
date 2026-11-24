@@ -32,6 +32,11 @@ def m(sistema, carpeta=RES):
     return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else None
 
 
+def m_revision(sistema):
+    ruta = RES / "revision_manual" / f"{sistema}.json"
+    return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else None
+
+
 def f3(x):
     return f"{x:.3f}".replace(".", ",")
 
@@ -171,6 +176,10 @@ class Deck:
 
     def guardar(self):
         SALIDA.parent.mkdir(parents=True, exist_ok=True)
+        props = self.prs.core_properties
+        props.title = "Asistente de atención para RielSur"
+        props.author = props.last_modified_by = "Felipe Retamal"
+        props.comments = ""
         self.prs.save(SALIDA)
 
 
@@ -235,14 +244,21 @@ def main():
     ], "Hice una v0 corregida que solo arregla los cuatro errores, para medir el diseño que propuso el modelo y no sus bugs. "
        "El detalle línea por línea está en docs/01_explicacion_v0.md.", size=19)
 
+    rev_v0c = m_revision("v0_corregida")
     if v0c:
-        d.tabla("La v0 corregida: el diseño del modelo, funcionando", ["Métrica", "v0 cruda", "v0 corregida"], [
+        filas_v0c = [
             ["Intención (accuracy)", f3(v0["intencion"]["accuracy"]), f3(v0c["intencion"]["accuracy"])],
             ["Datos (F1)", f3(v0["datos"]["f1"]), f3(v0c["datos"]["f1"])],
             ["Menciona lo esperado", pct(v0["respuestas"]["cobertura_menciones"]), pct(v0c["respuestas"]["cobertura_menciones"])],
-            ["Segundos por turno", "<0,01", f"{v0c['segundos_por_turno']:.0f}"],
-        ], "Con los errores arreglados la v0 entiende mejor, pero sigue sin contestar: las respuestas son fijas y no usan la base. "
-           "Además es lenta, porque qwen3:4b razona antes de cada respuesta.", anchos=[5, 3.5, 3.6])
+        ]
+        if rev_v0c:
+            filas_v0c.append(["Inventadas (revisión a mano)", "0", f"{rev_v0c['inventadas']} de {rev_v0c['respuestas']}"])
+        filas_v0c.append(["Segundos por turno", "<0,01", f"{v0c['segundos_por_turno']:.0f}"])
+        d.tabla("La v0 corregida: el diseño del modelo, funcionando", ["Métrica", "v0 cruda", "v0 corregida"], filas_v0c,
+                "Con los errores arreglados la v0 entiende mejor, pero sigue sin contestar: las respuestas son fijas y no usan la base. "
+                "Cuando llega a cerrar una compra dice que el pasaje será confirmado en 30 minutos, y eso no está en la base: "
+                "lo que vence en 30 minutos es el enlace de pago. El detector automático no lo ve porque el 30 sí aparece en la base. "
+                "Además es lenta, porque qwen3:4b razona antes de cada respuesta.", anchos=[5, 3.5, 3.6])
 
     d.vinetas("Cómo lo evalué", [
         "62 conversaciones de prueba (153 turnos) escritas a mano, con intención, datos y lo que la respuesta debe mencionar.",
@@ -275,21 +291,27 @@ def main():
             ["Versión", "Intención", "Datos F1", "Inventadas", "Reconoce", "Menciona"], filas,
             "Las versiones con plantillas no inventan datos porque cada cifra sale de la base. La que redacta con gemma3:4b suena "
             "más natural, pero es la que más inventa: en la revisión a mano, 69 de 153 respuestas tienen algo falso. "
-            "El mismo qwen3:4b de la v0, con un prompt mejor, es el que mejor detecta la intención.", anchos=[4.6, 1.5, 1.5, 1.5, 1.5, 1.5])
+            "El mismo qwen3:4b de la v0, con un prompt mejor, es el que mejor detecta la intención.",
+            nota_pie="Inventadas: según el detector automático. A mano: v0 corregida "
+                     + (f"{rev_v0c['inventadas']} de {rev_v0c['respuestas']}" if rev_v0c else "-")
+                     + ", gemma3:4b 69 de 153.",
+            anchos=[4.6, 1.5, 1.5, 1.5, 1.5, 1.5])
 
     d.imagen("Prueba contra validación: quién generaliza", RES / "graficos" / "intencion.png",
              "Las reglas caen al pasar a conversaciones nuevas porque las escribí mirando las de prueba. TF-IDF y el LLM se mantienen: "
              "TF-IDF aprendió de frases que escribí aparte y el LLM no aprendió de ninguna de las dos.",
-             pie=("La v0 corregida no tiene barra de validación: tarda casi dos minutos por turno y nunca la ajusté con la prueba.  "
+             pie=(f"La v0 corregida no tiene barra de validación: tarda {v0c['segundos_por_turno']:.0f} segundos por turno y nunca la ajusté con la prueba.  "
                   f"Reglas: {f3(reglas['intencion']['accuracy'])} → {f3(val['reglas']['intencion']['accuracy'])}.   "
                   f"TF-IDF: {f3(tfidf['intencion']['accuracy'])} → {f3(val['tfidf']['intencion']['accuracy'])}.   "
                   f"qwen3:4b: {f3(llm_int['intencion']['accuracy'])} → {f3(val['llm_intencion_regex']['intencion']['accuracy'])}.")
-             if reglas and val["reglas"] and tfidf and val["tfidf"] and llm_int and val["llm_intencion_regex"] else None)
+             if v0c and reglas and val["reglas"] and tfidf and val["tfidf"] and llm_int and val["llm_intencion_regex"] else None)
 
     d.imagen("Respuestas: decir lo correcto sin inventar", RES / "graficos" / "respuestas.png",
              "Verde es la proporción de datos esperados que la respuesta menciona; rojo, las respuestas con algo inventado. "
              "La v0 no inventa porque no dice nada. El LLM que redacta dice más cosas, pero inventa.",
-             pie="Verde: datos esperados que menciona la respuesta. Rojo: respuestas con datos inventados según el detector automático (para gemma3 la revisión a mano da 45%).")
+             pie="Verde: datos esperados que menciona la respuesta. Rojo: respuestas con datos inventados según el detector automático. "
+                 "A mano: gemma3 45%"
+                 + (f" y v0 corregida {pct(rev_v0c['inventadas'] / rev_v0c['respuestas'])}." if rev_v0c else "."))
 
     revision = json.loads((RES / "revision_manual" / "llm_respuestas.json").read_text(encoding="utf-8"))
     cat = revision["por_categoria"]
