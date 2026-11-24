@@ -1,0 +1,283 @@
+{
+  "descripcion": "Conversaciones de prueba del asistente de RielSur. Cada turno trae la intención correcta, los datos que el usuario entrega en ese mensaje (normalizados), si la pregunta no tiene respuesta en la base de conocimiento y, cuando corresponde, lo que la respuesta tiene que mencionar. Un elemento de debe_mencionar puede ser una lista de alternativas: basta con que aparezca una.",
+  "fecha_hoy": "2026-11-24",
+  "conversaciones": [
+    {"id": "C01", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Hola, buenas tardes", "intencion": "saludo", "datos": {}},
+      {"usuario": "Quiero comprar pasajes de Santiago a Talca", "intencion": "comprar_pasaje", "datos": {"origen": "Santiago", "destino": "Talca"}},
+      {"usuario": "Para el viernes, en el tren de las 10:30", "intencion": "comprar_pasaje", "datos": {"fecha": "2026-11-27", "hora": "10:30"}},
+      {"usuario": "Somos 2 adultos, clase estándar", "intencion": "comprar_pasaje", "datos": {"pasajeros": 2, "tarifa": "adulto", "clase": "estandar"}},
+      {"usuario": "Mi rut es 17.234.567-0 y mi correo es camila.rojas@gmail.com", "intencion": "comprar_pasaje", "datos": {"rut": "17234567-0", "correo": "camila.rojas@gmail.com"}, "debe_mencionar": ["14.000"]},
+      {"usuario": "Gracias, chao", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C02", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Necesito 1 pasaje de estudiante de Santiago a Chillán para el 3 de diciembre a las 14:00, clase estándar", "intencion": "comprar_pasaje", "datos": {"pasajeros": 1, "tarifa": "estudiante", "origen": "Santiago", "destino": "Chillán", "fecha": "2026-12-03", "hora": "14:00", "clase": "estandar"}},
+      {"usuario": "RUT 18765432-7, correo matias.fuentes@uc.cl", "intencion": "comprar_pasaje", "datos": {"rut": "18765432-7", "correo": "matias.fuentes@uc.cl"}, "debe_mencionar": ["7.210"]},
+      {"usuario": "Perfecto, muchas gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C03", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Wena, quiero sacar un pasaje pa Rancagua", "intencion": "comprar_pasaje", "datos": {"destino": "Rancagua"}},
+      {"usuario": "Desde Santiago, mañana", "intencion": "comprar_pasaje", "datos": {"origen": "Santiago", "fecha": "2026-11-25"}},
+      {"usuario": "El de las 7 y media", "intencion": "comprar_pasaje", "datos": {"hora": "07:30"}},
+      {"usuario": "Uno no más, adulto", "intencion": "comprar_pasaje", "datos": {"pasajeros": 1, "tarifa": "adulto"}},
+      {"usuario": "Estándar", "intencion": "comprar_pasaje", "datos": {"clase": "estandar"}},
+      {"usuario": "15678901-1", "intencion": "comprar_pasaje", "datos": {"rut": "15678901-1"}},
+      {"usuario": "jp.soto@hotmail.com", "intencion": "comprar_pasaje", "datos": {"correo": "jp.soto@hotmail.com"}, "debe_mencionar": ["3.300"]}
+    ]},
+    {"id": "C04", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Buenos días. Quiero comprar un pasaje para mi mamá, que tiene 72 años", "intencion": "comprar_pasaje", "datos": {"pasajeros": 1, "tarifa": "adulto_mayor"}},
+      {"usuario": "Va de Chillán a Santiago el sábado en la mañana, en el de las 9", "intencion": "comprar_pasaje", "datos": {"origen": "Chillán", "destino": "Santiago", "fecha": "2026-11-28", "hora": "09:00"}},
+      {"usuario": "Clase estándar. Ella se llama Rosa Muñoz", "intencion": "comprar_pasaje", "datos": {"clase": "estandar", "nombre": "Rosa Muñoz"}},
+      {"usuario": "Mi rut es 13.579.246-2 y el correo rosa.munoz@yahoo.com", "intencion": "comprar_pasaje", "datos": {"rut": "13579246-2", "correo": "rosa.munoz@yahoo.com"}, "debe_mencionar": ["6.180"]}
+    ]},
+    {"id": "C05", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Quiero 3 pasajes en clase preferente de Santiago a Curicó para el 30 de noviembre", "intencion": "comprar_pasaje", "datos": {"pasajeros": 3, "clase": "preferente", "origen": "Santiago", "destino": "Curicó", "fecha": "2026-11-30"}},
+      {"usuario": "A las 18:30", "intencion": "comprar_pasaje", "datos": {"hora": "18:30"}},
+      {"usuario": "Adultos los tres", "intencion": "comprar_pasaje", "datos": {"tarifa": "adulto"}},
+      {"usuario": "Mi nombre es Andrés Vidal, rut 21345678-4, correo andres.vidal@outlook.com", "intencion": "comprar_pasaje", "datos": {"nombre": "Andrés Vidal", "rut": "21345678-4", "correo": "andres.vidal@outlook.com"}, "debe_mencionar": ["27.000"]},
+      {"usuario": "Listo, gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C06", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Hola", "intencion": "saludo", "datos": {}},
+      {"usuario": "Quiero un pasaje de Santiago a Talca mañana a las 9 de la mañana", "intencion": "comprar_pasaje", "datos": {"origen": "Santiago", "destino": "Talca", "fecha": "2026-11-25", "hora": "09:00"}, "debe_mencionar": ["10:30"]},
+      {"usuario": "Ya, entonces el de las 10:30", "intencion": "comprar_pasaje", "datos": {"hora": "10:30"}},
+      {"usuario": "1 adulto, estándar", "intencion": "comprar_pasaje", "datos": {"pasajeros": 1, "tarifa": "adulto", "clase": "estandar"}},
+      {"usuario": "rut 10.203.040-0, mail pablo.araya@gmail.com", "intencion": "comprar_pasaje", "datos": {"rut": "10203040-0", "correo": "pablo.araya@gmail.com"}, "debe_mencionar": ["7.000"]}
+    ]},
+    {"id": "C07", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Buenas! Somos dos estudiantes y queremos ir de Talca a Chillán el domingo", "intencion": "comprar_pasaje", "datos": {"pasajeros": 2, "tarifa": "estudiante", "origen": "Talca", "destino": "Chillán", "fecha": "2026-11-29"}},
+      {"usuario": "¿Qué horarios hay ese día?", "intencion": "consultar_horario", "datos": {}, "debe_mencionar": ["11:00", "15:30", "20:00"]},
+      {"usuario": "Nos sirve el de las 15:30, en estándar", "intencion": "comprar_pasaje", "datos": {"hora": "15:30", "clase": "estandar"}},
+      {"usuario": "El rut es 19876012-9 y el correo vale.diaz@udec.cl", "intencion": "comprar_pasaje", "datos": {"rut": "19876012-9", "correo": "vale.diaz@udec.cl"}, "debe_mencionar": ["6.720"]},
+      {"usuario": "Gracias!", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C08", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Necesito 8 pasajes de Santiago a Chillán para un paseo de curso el 10 de diciembre", "intencion": "comprar_pasaje", "datos": {"pasajeros": 8, "origen": "Santiago", "destino": "Chillán", "fecha": "2026-12-10"}},
+      {"usuario": "Ya, entonces hago dos compras. Partamos con 6 estudiantes en el de las 7:30", "intencion": "comprar_pasaje", "datos": {"pasajeros": 6, "tarifa": "estudiante", "hora": "07:30"}},
+      {"usuario": "Estándar. Rut 16543210-K, correo profe.lagos@colegio.cl", "intencion": "comprar_pasaje", "datos": {"clase": "estandar", "rut": "16543210-K", "correo": "profe.lagos@colegio.cl"}, "debe_mencionar": ["43.260"]}
+    ]},
+    {"id": "C09", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Quiero comprar pasajes para el 15 de enero de Santiago a Talca", "intencion": "comprar_pasaje", "datos": {"fecha": "2027-01-15", "origen": "Santiago", "destino": "Talca"}, "debe_mencionar": ["30 días"]},
+      {"usuario": "Ah, ok. Entonces vuelvo a escribir más adelante, gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C10", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "Hola, quiero un pasaje de Santiago a Linares", "intencion": "comprar_pasaje", "datos": {"origen": "Santiago", "destino": "Linares"}},
+      {"usuario": "Perdón, me equivoqué, es a Parral", "intencion": "comprar_pasaje", "datos": {"destino": "Parral"}},
+      {"usuario": "El lunes a las 14:00, un adulto, estándar", "intencion": "comprar_pasaje", "datos": {"fecha": "2026-11-30", "hora": "14:00", "pasajeros": 1, "tarifa": "adulto", "clase": "estandar"}},
+      {"usuario": "Rut 14.222.333-3, correo carla.pino@gmail.com", "intencion": "comprar_pasaje", "datos": {"rut": "14222333-3", "correo": "carla.pino@gmail.com"}, "debe_mencionar": ["9.000"]}
+    ]},
+    {"id": "C11", "tema": "comprar_pasaje", "turnos": [
+      {"usuario": "¿Puedo comprar un pasaje de estudiante en clase preferente de Santiago a Talca?", "intencion": "comprar_pasaje", "datos": {"tarifa": "estudiante", "clase": "preferente", "origen": "Santiago", "destino": "Talca"}},
+      {"usuario": "Entonces en estándar no más, para el jueves a las 18:30", "intencion": "comprar_pasaje", "datos": {"clase": "estandar", "fecha": "2026-11-26", "hora": "18:30"}},
+      {"usuario": "Uno. Mi rut es 20.987.654-K y mi correo es nico.reyes@usach.cl", "intencion": "comprar_pasaje", "datos": {"pasajeros": 1, "rut": "20987654-K", "correo": "nico.reyes@usach.cl"}, "debe_mencionar": ["4.900"]}
+    ]},
+    {"id": "C12", "tema": "consultar_horario", "turnos": [
+      {"usuario": "¿A qué hora sale el primer tren de Santiago a Chillán un día de semana?", "intencion": "consultar_horario", "datos": {"origen": "Santiago", "destino": "Chillán"}, "debe_mencionar": ["07:30"]},
+      {"usuario": "¿Y a qué hora llega?", "intencion": "consultar_horario", "datos": {}, "debe_mencionar": ["11:30"]},
+      {"usuario": "Gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C13", "tema": "consultar_horario", "turnos": [
+      {"usuario": "Hola, qué horarios tienen de Talca a Santiago el sábado", "intencion": "consultar_horario", "datos": {"origen": "Talca", "destino": "Santiago", "fecha": "2026-11-28"}, "debe_mencionar": ["10:30", "15:00", "19:30"]},
+      {"usuario": "Y el último llega a Santiago a qué hora?", "intencion": "consultar_horario", "datos": {}, "debe_mencionar": ["22:00"]}
+    ]},
+    {"id": "C14", "tema": "consultar_horario", "turnos": [
+      {"usuario": "Buenas, cuánto se demora el tren de Santiago a Talca?", "intencion": "consultar_horario", "datos": {"origen": "Santiago", "destino": "Talca"}, "debe_mencionar": [["150 minutos", "2 horas y 30", "2 horas 30", "dos horas y media", "2 horas y media", "2:30", "2 h 30"]]}
+    ]},
+    {"id": "C15", "tema": "consultar_horario", "turnos": [
+      {"usuario": "¿Hay trenes de Rancagua a Curicó mañana en la tarde?", "intencion": "consultar_horario", "datos": {"origen": "Rancagua", "destino": "Curicó", "fecha": "2026-11-25"}, "debe_mencionar": ["14:50", "19:20"]},
+      {"usuario": "Ok, gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C16", "tema": "consultar_horario", "turnos": [
+      {"usuario": "¿El tren de Santiago a Chillán para en Linares?", "intencion": "consultar_horario", "datos": {"origen": "Santiago", "destino": "Chillán"}},
+      {"usuario": "¿A qué hora pasa por Linares el de las 14:00?", "intencion": "consultar_horario", "datos": {"hora": "14:00"}, "debe_mencionar": ["17:00"]}
+    ]},
+    {"id": "C17", "tema": "consultar_horario", "turnos": [
+      {"usuario": "Necesito llegar a Chillán antes de las 3 de la tarde el lunes, saliendo de Santiago. ¿Qué tren me sirve?", "intencion": "consultar_horario", "datos": {"destino": "Chillán", "origen": "Santiago", "fecha": "2026-11-30"}, "debe_mencionar": ["10:30"]},
+      {"usuario": "Perfecto, gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C18", "tema": "consultar_precio", "turnos": [
+      {"usuario": "Cuánto cuesta el pasaje de Santiago a Chillán?", "intencion": "consultar_precio", "datos": {"origen": "Santiago", "destino": "Chillán"}, "debe_mencionar": ["10.300"]},
+      {"usuario": "¿Y en clase preferente?", "intencion": "consultar_precio", "datos": {"clase": "preferente"}, "debe_mencionar": ["16.500"]}
+    ]},
+    {"id": "C19", "tema": "consultar_precio", "turnos": [
+      {"usuario": "Hola! ¿Cuánto sale ir de Rancagua a Talca con TNE?", "intencion": "consultar_precio", "datos": {"origen": "Rancagua", "destino": "Talca", "tarifa": "estudiante"}, "debe_mencionar": ["3.640"]}
+    ]},
+    {"id": "C20", "tema": "consultar_precio", "turnos": [
+      {"usuario": "Precio para adulto mayor de Curicó a Santiago", "intencion": "consultar_precio", "datos": {"origen": "Curicó", "destino": "Santiago", "tarifa": "adulto_mayor"}, "debe_mencionar": ["3.360"]},
+      {"usuario": "Y si son 2?", "intencion": "consultar_precio", "datos": {"pasajeros": 2}, "debe_mencionar": ["6.720"]}
+    ]},
+    {"id": "C21", "tema": "consultar_precio", "turnos": [
+      {"usuario": "Quiero saber cuánto sale el pasaje de un niño de 8 años de Santiago a San Fernando", "intencion": "consultar_precio", "datos": {"tarifa": "nino", "pasajeros": 1, "origen": "Santiago", "destino": "San Fernando"}, "debe_mencionar": ["2.200"]},
+      {"usuario": "¿Y un bebé de 1 año paga?", "intencion": "consultar_precio", "datos": {}, "debe_mencionar": [["gratis", "no paga"]]},
+      {"usuario": "Ok gracias, chao", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C22", "tema": "consultar_precio", "turnos": [
+      {"usuario": "Buenas tardes, ¿tienen descuento para estudiantes?", "intencion": "consultar_precio", "datos": {"tarifa": "estudiante"}, "debe_mencionar": ["30"]},
+      {"usuario": "¿Y para adultos mayores?", "intencion": "consultar_precio", "datos": {"tarifa": "adulto_mayor"}, "debe_mencionar": ["40"]},
+      {"usuario": "Gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C23", "tema": "consultar_precio", "turnos": [
+      {"usuario": "¿Cuánto vale el pasaje de Talca a Linares un domingo?", "intencion": "consultar_precio", "datos": {"origen": "Talca", "destino": "Linares", "fecha": "2026-11-29"}, "debe_mencionar": ["2.600"]},
+      {"usuario": "¿Y en preferente?", "intencion": "consultar_precio", "datos": {"clase": "preferente"}, "debe_mencionar": ["4.200"]}
+    ]},
+    {"id": "C24", "tema": "cambiar_pasaje", "turnos": [
+      {"usuario": "Hola, necesito cambiar mi pasaje", "intencion": "cambiar_pasaje", "datos": {}},
+      {"usuario": "El código es RS-10234 y mi rut 12.345.678-5", "intencion": "cambiar_pasaje", "datos": {"codigo_reserva": "RS-10234", "rut": "12345678-5"}},
+      {"usuario": "Quiero pasarlo al sábado 5 de diciembre a las 13:00", "intencion": "cambiar_pasaje", "datos": {"fecha": "2026-12-05", "hora": "13:00"}, "debe_mencionar": [["1.000", "2.000"]]},
+      {"usuario": "Ok, dale", "intencion": "cambiar_pasaje", "datos": {}}
+    ]},
+    {"id": "C25", "tema": "cambiar_pasaje", "turnos": [
+      {"usuario": "Quiero cambiar la fecha de mi viaje RS-31502", "intencion": "cambiar_pasaje", "datos": {"codigo_reserva": "RS-31502"}},
+      {"usuario": "Mi rut es 19456321-3. Lo quiero para el viernes, mismo horario", "intencion": "cambiar_pasaje", "datos": {"rut": "19456321-3", "fecha": "2026-11-27"}}
+    ]},
+    {"id": "C26", "tema": "cambiar_pasaje", "turnos": [
+      {"usuario": "¿Puedo cambiar un pasaje que ya cambié una vez?", "intencion": "cambiar_pasaje", "datos": {}},
+      {"usuario": "Ok, ¿y hasta cuándo puedo cambiar un pasaje?", "intencion": "cambiar_pasaje", "datos": {}, "debe_mencionar": [["2 horas", "dos horas"]]}
+    ]},
+    {"id": "C27", "tema": "cambiar_pasaje", "turnos": [
+      {"usuario": "Hola, tengo la reserva RS-99999 y quiero cambiarla para mañana", "intencion": "cambiar_pasaje", "datos": {"codigo_reserva": "RS-99999", "fecha": "2026-11-25"}},
+      {"usuario": "Mi rut es 18001234-6", "intencion": "cambiar_pasaje", "datos": {"rut": "18001234-6"}}
+    ]},
+    {"id": "C28", "tema": "cambiar_pasaje", "turnos": [
+      {"usuario": "Necesito cambiar mi pasaje RS-58077 de mañana, rut 20114587-2, para el jueves a las 19:30", "intencion": "cambiar_pasaje", "datos": {"codigo_reserva": "RS-58077", "rut": "20114587-2", "fecha": "2026-11-26", "hora": "19:30"}},
+      {"usuario": "¿Cuánto me cobran por el cambio?", "intencion": "cambiar_pasaje", "datos": {}, "debe_mencionar": [["1.000", "2.000"]]}
+    ]},
+    {"id": "C29", "tema": "devolver_pasaje", "turnos": [
+      {"usuario": "Quiero devolver mi pasaje", "intencion": "devolver_pasaje", "datos": {}},
+      {"usuario": "Código RS-44120, rut 16.783.092-7", "intencion": "devolver_pasaje", "datos": {"codigo_reserva": "RS-44120", "rut": "16783092-7"}, "debe_mencionar": [["44.550", "90"]]},
+      {"usuario": "¿En cuánto tiempo me llega la plata?", "intencion": "devolver_pasaje", "datos": {}, "debe_mencionar": [["10 días", "diez días"]]}
+    ]},
+    {"id": "C30", "tema": "devolver_pasaje", "turnos": [
+      {"usuario": "Hola, ya no voy a poder viajar mañana, quiero anular el pasaje RS-58077", "intencion": "devolver_pasaje", "datos": {"codigo_reserva": "RS-58077"}},
+      {"usuario": "Mi rut es 20.114.587-2", "intencion": "devolver_pasaje", "datos": {"rut": "20114587-2"}}
+    ]},
+    {"id": "C31", "tema": "devolver_pasaje", "turnos": [
+      {"usuario": "Si devuelvo un pasaje 3 horas antes de que salga el tren, ¿me devuelven algo?", "intencion": "devolver_pasaje", "datos": {}, "debe_mencionar": ["50"]}
+    ]},
+    {"id": "C32", "tema": "devolver_pasaje", "turnos": [
+      {"usuario": "Quiero la devolución de la reserva RS-20871, rut 9876543-3", "intencion": "devolver_pasaje", "datos": {"codigo_reserva": "RS-20871", "rut": "9876543-3"}, "debe_mencionar": [["5.562", "90"]]},
+      {"usuario": "Gracias, que esté bien", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C33", "tema": "devolver_pasaje", "turnos": [
+      {"usuario": "Necesito devolver un pasaje pero perdí el código de reserva", "intencion": "devolver_pasaje", "datos": {}},
+      {"usuario": "Mi rut es 7.654.321-6", "intencion": "devolver_pasaje", "datos": {"rut": "7654321-6"}}
+    ]},
+    {"id": "C34", "tema": "equipaje_mascotas", "turnos": [
+      {"usuario": "¿Cuántas maletas puedo llevar?", "intencion": "equipaje_mascotas", "datos": {}, "debe_mencionar": ["23"]},
+      {"usuario": "¿Y si llevo una maleta extra cuánto cuesta?", "intencion": "equipaje_mascotas", "datos": {}, "debe_mencionar": ["3.000"]}
+    ]},
+    {"id": "C35", "tema": "equipaje_mascotas", "turnos": [
+      {"usuario": "Puedo viajar con mi perro? Pesa como 5 kilos", "intencion": "equipaje_mascotas", "datos": {}, "debe_mencionar": ["2.500"]},
+      {"usuario": "¿Tiene que ir en transportín?", "intencion": "equipaje_mascotas", "datos": {}, "debe_mencionar": ["transportín"]}
+    ]},
+    {"id": "C36", "tema": "equipaje_mascotas", "turnos": [
+      {"usuario": "Hola, quiero llevar mi bicicleta en el tren de Santiago a Talca", "intencion": "equipaje_mascotas", "datos": {"origen": "Santiago", "destino": "Talca"}, "debe_mencionar": [["plegada", "plegable"]]}
+    ]},
+    {"id": "C37", "tema": "equipaje_mascotas", "turnos": [
+      {"usuario": "Mi perro es un labrador de 30 kilos, ¿puede ir conmigo?", "intencion": "equipaje_mascotas", "datos": {}, "debe_mencionar": [["8 kg", "8 kilos"]]},
+      {"usuario": "¿Y si es perro de asistencia?", "intencion": "equipaje_mascotas", "datos": {}, "debe_mencionar": ["gratis"]}
+    ]},
+    {"id": "C38", "tema": "equipaje_mascotas", "turnos": [
+      {"usuario": "Viajo con mi gato de Chillán a Talca. ¿Cuánto pago por llevarlo?", "intencion": "equipaje_mascotas", "datos": {"origen": "Chillán", "destino": "Talca"}, "debe_mencionar": ["2.500"]}
+    ]},
+    {"id": "C39", "tema": "estado_tren", "turnos": [
+      {"usuario": "¿El tren de las 14:00 a Chillán viene atrasado?", "intencion": "estado_tren", "datos": {"hora": "14:00", "destino": "Chillán"}, "sin_informacion": true, "debe_mencionar": [["rielsur.cl/estado", "2000 0000"]]}
+    ]},
+    {"id": "C40", "tema": "estado_tren", "turnos": [
+      {"usuario": "Hola, el tren de Talca a Santiago de hoy está funcionando normal?", "intencion": "estado_tren", "datos": {"origen": "Talca", "destino": "Santiago", "fecha": "2026-11-24"}, "sin_informacion": true}
+    ]},
+    {"id": "C41", "tema": "estado_tren", "turnos": [
+      {"usuario": "¿Por qué el tren se detuvo en Curicó?", "intencion": "estado_tren", "datos": {}, "sin_informacion": true}
+    ]},
+    {"id": "C42", "tema": "estado_tren", "turnos": [
+      {"usuario": "¿Hay paro de trenes mañana?", "intencion": "estado_tren", "datos": {"fecha": "2026-11-25"}, "sin_informacion": true}
+    ]},
+    {"id": "C43", "tema": "reclamo", "turnos": [
+      {"usuario": "Quiero poner un reclamo, el tren llegó una hora tarde", "intencion": "reclamo", "datos": {}},
+      {"usuario": "Mi rut es 12.987.345-0 y el código RS-10234", "intencion": "reclamo", "datos": {"rut": "12987345-0", "codigo_reserva": "RS-10234"}},
+      {"usuario": "¿Cuándo me responden?", "intencion": "reclamo", "datos": {}, "debe_mencionar": [["5 días", "cinco días"]]}
+    ]},
+    {"id": "C44", "tema": "reclamo", "turnos": [
+      {"usuario": "Pésima atención en la boletería de Rancagua, quiero reclamar", "intencion": "reclamo", "datos": {}},
+      {"usuario": "Me llamo Sofía Herrera, rut 22123456-1, no tengo código de reserva porque no alcancé a comprar", "intencion": "reclamo", "datos": {"nombre": "Sofía Herrera", "rut": "22123456-1"}}
+    ]},
+    {"id": "C45", "tema": "reclamo", "turnos": [
+      {"usuario": "El aire acondicionado del coche 4 no funcionaba, quiero dejar un reclamo. Reserva RS-31502", "intencion": "reclamo", "datos": {"codigo_reserva": "RS-31502"}},
+      {"usuario": "rut 19.456.321-3", "intencion": "reclamo", "datos": {"rut": "19456321-3"}}
+    ]},
+    {"id": "C46", "tema": "reclamo", "turnos": [
+      {"usuario": "Me cobraron dos veces el pasaje, necesito que me devuelvan la plata", "intencion": "reclamo", "datos": {}},
+      {"usuario": "El código es RS-44120, mi correo es d.castro@gmail.com", "intencion": "reclamo", "datos": {"codigo_reserva": "RS-44120", "correo": "d.castro@gmail.com"}}
+    ]},
+    {"id": "C47", "tema": "fuera_de_alcance", "turnos": [
+      {"usuario": "¿Los trenes tienen wifi?", "intencion": "fuera_de_alcance", "datos": {}, "sin_informacion": true},
+      {"usuario": "¿Y hay enchufes en los asientos?", "intencion": "fuera_de_alcance", "datos": {}, "sin_informacion": true}
+    ]},
+    {"id": "C48", "tema": "fuera_de_alcance", "turnos": [
+      {"usuario": "Quiero un pasaje de Santiago a Puerto Montt", "intencion": "comprar_pasaje", "datos": {"origen": "Santiago", "destino": "Puerto Montt"}, "sin_informacion": true}
+    ]},
+    {"id": "C49", "tema": "fuera_de_alcance", "turnos": [
+      {"usuario": "¿Cómo va a estar el clima en Chillán el fin de semana?", "intencion": "fuera_de_alcance", "datos": {}, "sin_informacion": true}
+    ]},
+    {"id": "C50", "tema": "fuera_de_alcance", "turnos": [
+      {"usuario": "¿Me puedes recomendar un restaurante en Talca?", "intencion": "fuera_de_alcance", "datos": {}, "sin_informacion": true}
+    ]},
+    {"id": "C51", "tema": "fuera_de_alcance", "turnos": [
+      {"usuario": "¿Venden comida vegana en el tren?", "intencion": "fuera_de_alcance", "datos": {}, "sin_informacion": true},
+      {"usuario": "¿Y hay cafetería?", "intencion": "fuera_de_alcance", "datos": {}, "debe_mencionar": ["cafetería"]}
+    ]},
+    {"id": "C52", "tema": "fuera_de_alcance", "turnos": [
+      {"usuario": "¿Hay estacionamiento en la estación de Talca?", "intencion": "fuera_de_alcance", "datos": {}, "sin_informacion": true}
+    ]},
+    {"id": "C53", "tema": "fuera_de_alcance", "turnos": [
+      {"usuario": "¿El tren tiene acceso para silla de ruedas?", "intencion": "fuera_de_alcance", "datos": {}, "debe_mencionar": [["48 horas", "48 h"]]}
+    ]},
+    {"id": "C54", "tema": "fuera_de_alcance", "turnos": [
+      {"usuario": "¿Puedo comprar con ustedes un pasaje de bus a Concepción?", "intencion": "fuera_de_alcance", "datos": {}, "sin_informacion": true}
+    ]},
+    {"id": "C55", "tema": "mixta", "turnos": [
+      {"usuario": "Hola, buenas noches", "intencion": "saludo", "datos": {}},
+      {"usuario": "¿Cuánto sale de Santiago a Talca?", "intencion": "consultar_precio", "datos": {"origen": "Santiago", "destino": "Talca"}, "debe_mencionar": ["7.000"]},
+      {"usuario": "¿Y a qué hora sale el último del viernes?", "intencion": "consultar_horario", "datos": {"fecha": "2026-11-27"}, "debe_mencionar": ["18:30"]},
+      {"usuario": "Ya, cómprame uno para el de las 18:30, adulto, estándar", "intencion": "comprar_pasaje", "datos": {"hora": "18:30", "pasajeros": 1, "tarifa": "adulto", "clase": "estandar"}},
+      {"usuario": "rut 11.555.777-7, correo f.morales@gmail.com", "intencion": "comprar_pasaje", "datos": {"rut": "11555777-7", "correo": "f.morales@gmail.com"}, "debe_mencionar": ["7.000"]},
+      {"usuario": "Chao, gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C56", "tema": "mixta", "turnos": [
+      {"usuario": "Buenas, quiero comprar un pasaje a Chillán pero antes, ¿puedo llevar a mi gata?", "intencion": "equipaje_mascotas", "datos": {"destino": "Chillán"}, "debe_mencionar": ["2.500"]},
+      {"usuario": "Ok. Entonces el pasaje es desde Santiago el domingo a las 8:30, un adulto estándar", "intencion": "comprar_pasaje", "datos": {"origen": "Santiago", "fecha": "2026-11-29", "hora": "08:30", "pasajeros": 1, "tarifa": "adulto", "clase": "estandar"}},
+      {"usuario": "Rut 18.001.234-6, correo ignacia.paz@gmail.com", "intencion": "comprar_pasaje", "datos": {"rut": "18001234-6", "correo": "ignacia.paz@gmail.com"}, "debe_mencionar": ["10.300"]}
+    ]},
+    {"id": "C57", "tema": "mixta", "turnos": [
+      {"usuario": "Hola, ¿el tren de mañana a Rancagua va con retraso?", "intencion": "estado_tren", "datos": {"destino": "Rancagua", "fecha": "2026-11-25"}, "sin_informacion": true},
+      {"usuario": "Bueno, entonces quiero devolver mi pasaje, es el RS-31502", "intencion": "devolver_pasaje", "datos": {"codigo_reserva": "RS-31502"}},
+      {"usuario": "rut 19456321-3", "intencion": "devolver_pasaje", "datos": {"rut": "19456321-3"}}
+    ]},
+    {"id": "C58", "tema": "mixta", "turnos": [
+      {"usuario": "Hola", "intencion": "saludo", "datos": {}},
+      {"usuario": "Quiero reclamar porque perdieron mi maleta", "intencion": "reclamo", "datos": {}},
+      {"usuario": "¿Y cuánto equipaje se puede llevar?", "intencion": "equipaje_mascotas", "datos": {}, "debe_mencionar": ["23"]},
+      {"usuario": "Gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C59", "tema": "mixta", "turnos": [
+      {"usuario": "Buenos días, ¿cuánto cuesta un pasaje de Santiago a Linares para estudiante?", "intencion": "consultar_precio", "datos": {"origen": "Santiago", "destino": "Linares", "tarifa": "estudiante"}, "debe_mencionar": ["5.670"]},
+      {"usuario": "¿Tienen wifi en el tren?", "intencion": "fuera_de_alcance", "datos": {}, "sin_informacion": true},
+      {"usuario": "Ok, quiero comprar uno para el martes 1 de diciembre a las 10:30, estándar", "intencion": "comprar_pasaje", "datos": {"pasajeros": 1, "fecha": "2026-12-01", "hora": "10:30", "clase": "estandar"}},
+      {"usuario": "Mi rut es 15678901-1, correo t.saavedra@gmail.com", "intencion": "comprar_pasaje", "datos": {"rut": "15678901-1", "correo": "t.saavedra@gmail.com"}, "debe_mencionar": ["5.670"]}
+    ]},
+    {"id": "C60", "tema": "mixta", "turnos": [
+      {"usuario": "Hola, quiero cambiar mi pasaje RS-20871", "intencion": "cambiar_pasaje", "datos": {"codigo_reserva": "RS-20871"}},
+      {"usuario": "Rut 9.876.543-3. ¿Hasta qué hora puedo cambiarlo?", "intencion": "cambiar_pasaje", "datos": {"rut": "9876543-3"}, "debe_mencionar": [["2 horas", "dos horas"]]},
+      {"usuario": "Mejor lo devuelvo. ¿Cuánto me devuelven?", "intencion": "devolver_pasaje", "datos": {}, "debe_mencionar": [["5.562", "90"]]},
+      {"usuario": "Ya, gracias", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C61", "tema": "saludo", "turnos": [
+      {"usuario": "Hola, ¿con quién hablo?", "intencion": "saludo", "datos": {}},
+      {"usuario": "Ok, era solo eso, chao", "intencion": "despedida", "datos": {}}
+    ]},
+    {"id": "C62", "tema": "saludo", "turnos": [
+      {"usuario": "Buenas tardes", "intencion": "saludo", "datos": {}},
+      {"usuario": "Muchas gracias por la ayuda", "intencion": "despedida", "datos": {}}
+    ]}
+  ]
+}
