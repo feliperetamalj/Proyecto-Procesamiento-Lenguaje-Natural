@@ -8,7 +8,9 @@ Cada turno pasa por cuatro pasos:
     4. responder (plantillas con datos de la base, o un LLM que redacta).
 
 Las piezas se eligen al crear el asistente, así puedo comparar versiones
-cambiando una sola a la vez.
+cambiando una sola a la vez. La configuración por defecto es la versión final:
+qwen3:4b para la intención, regex para los datos, contexto y plantillas. Si
+Ollama no responde, la intención la decide TF-IDF.
 
 Uso por consola:
     python -m chatbot.asistente
@@ -40,7 +42,7 @@ no mas nomas solo ya ok entonces porfa favor si que ese esa dia tren de las desd
 
 
 class Asistente:
-    def __init__(self, intenciones="tfidf", extraccion="regex", respuestas="plantillas", contexto=True,
+    def __init__(self, intenciones="llm", extraccion="regex", respuestas="plantillas", contexto=True,
                  modelo_llm="qwen3:4b", modelo_respuestas="gemma3:4b"):
         self.base = Base()
         self.extractor = Extractor(self.base)
@@ -48,7 +50,8 @@ class Asistente:
         self.modo_intenciones, self.modo_extraccion = intenciones, extraccion
         self.contexto = contexto
         self.llm = LLM(modelo_llm) if "llm" in (intenciones, extraccion) else None
-        self.clasificador = {"reglas": Reglas, "tfidf": TfidfLR}.get(intenciones, lambda: None)()
+        # Con el LLM, TF-IDF queda de respaldo por si Ollama no está disponible.
+        self.clasificador = {"reglas": Reglas, "tfidf": TfidfLR, "llm": TfidfLR}[intenciones]()
         self.redactor = RedactorLLM(self.base, modelo_respuestas) if respuestas == "llm" else None
 
     # ------------------------------------------------------------------
@@ -57,16 +60,19 @@ class Asistente:
         fecha_hoy = fecha_hoy or date.today().isoformat()
         previa = estado.get("intencion")
 
-        intencion_llm = None
+        intencion_llm, datos_llm = None, None
         if self.llm:
-            intencion_llm, datos_llm = self.llm.analizar(mensaje, previa if self.contexto else None, fecha_hoy)
-        if self.modo_extraccion == "llm":
+            try:
+                intencion_llm, datos_llm = self.llm.analizar(mensaje, previa if self.contexto else None, fecha_hoy)
+            except Exception:  # Ollama apagado o sin el modelo: seguimos sin LLM
+                intencion_llm, datos_llm = None, None
+        if self.modo_extraccion == "llm" and datos_llm is not None:
             datos = {k: normalizar_valor(k, v, self.base) for k, v in datos_llm.items() if k in CAMPOS}
             datos = {k: v for k, v in datos.items() if v is not None}
         else:
             datos = self.extractor.extraer(mensaje, fecha_hoy)
 
-        if self.modo_intenciones == "llm":
+        if self.modo_intenciones == "llm" and intencion_llm:
             intencion, confianza = intencion_llm, 1.0
         else:
             intencion, confianza = self.clasificador.predecir(mensaje)

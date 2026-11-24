@@ -9,6 +9,7 @@
 """
 
 import json
+import os
 import re
 
 from chatbot.base import INTENCIONES, RAIZ, sin_tildes
@@ -99,8 +100,9 @@ class LLM:
     Le paso la intención del trámite en curso para que pueda resolver los
     mensajes que solo traen datos, como "15678901-1"."""
 
-    def __init__(self, modelo="qwen3:4b", url="http://localhost:11434"):
-        self.modelo, self.url = modelo, url
+    def __init__(self, modelo="qwen3:4b", url=None):
+        self.modelo = modelo
+        self.url = url or os.environ.get("OLLAMA_URL", "http://localhost:11434")
 
     def prompt(self, mensaje, intencion_previa, fecha_hoy):
         lista = "\n".join(f"- {k}: {v}" for k, v in DESCRIPCIONES.items())

@@ -2,3 +2,6 @@ requests>=2.31
 numpy>=1.26
 scikit-learn>=1.4
 matplotlib>=3.8
+# Solo para generar el informe en PDF y la presentación
+markdown>=3.5
+python-pptx>=1.0

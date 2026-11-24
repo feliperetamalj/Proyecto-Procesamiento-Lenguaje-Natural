@@ -1,0 +1,186 @@
+{
+  "conversaciones": 62,
+  "turnos": 153,
+  "errores_de_ejecucion": 0,
+  "segundos_por_turno": 5.4141176470588235,
+  "intencion": {
+    "accuracy": 0.934640522875817,
+    "macro_f1": 0.9186871143788141,
+    "por_clase": {
+      "saludo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 6
+      },
+      "despedida": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 16
+      },
+      "comprar_pasaje": {
+        "precision": 0.9565217391304348,
+        "recall": 0.9565217391304348,
+        "f1": 0.9565217391304348,
+        "soporte": 46
+      },
+      "consultar_horario": {
+        "precision": 0.7857142857142857,
+        "recall": 1.0,
+        "f1": 0.88,
+        "soporte": 11
+      },
+      "consultar_precio": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 13
+      },
+      "cambiar_pasaje": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 14
+      },
+      "devolver_pasaje": {
+        "precision": 0.8571428571428571,
+        "recall": 1.0,
+        "f1": 0.923076923076923,
+        "soporte": 12
+      },
+      "equipaje_mascotas": {
+        "precision": 0.75,
+        "recall": 0.9,
+        "f1": 0.8181818181818182,
+        "soporte": 10
+      },
+      "estado_tren": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "soporte": 5
+      },
+      "reclamo": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "soporte": 10
+      },
+      "fuera_de_alcance": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
+        "soporte": 10
+      }
+    },
+    "confusion": {
+      "comprar_pasaje -> consultar_horario": 2,
+      "equipaje_mascotas -> comprar_pasaje": 1,
+      "estado_tren -> consultar_horario": 1,
+      "fuera_de_alcance -> comprar_pasaje": 1,
+      "fuera_de_alcance -> equipaje_mascotas": 3,
+      "reclamo -> devolver_pasaje": 2
+    }
+  },
+  "intencion_por_tema": {
+    "cambiar_pasaje": 1.0,
+    "comprar_pasaje": 0.9787234042553191,
+    "consultar_horario": 1.0,
+    "consultar_precio": 1.0,
+    "devolver_pasaje": 1.0,
+    "equipaje_mascotas": 1.0,
+    "estado_tren": 0.75,
+    "fuera_de_alcance": 0.6,
+    "mixta": 0.9166666666666666,
+    "reclamo": 0.7777777777777778,
+    "saludo": 1.0
+  },
+  "datos": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "por_campo": {
+      "origen": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 29
+      },
+      "destino": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 34
+      },
+      "fecha": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 25
+      },
+      "hora": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 18
+      },
+      "pasajeros": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 16
+      },
+      "tarifa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 18
+      },
+      "clase": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 16
+      },
+      "rut": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 26
+      },
+      "correo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 14
+      },
+      "codigo_reserva": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 12
+      },
+      "nombre": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 3
+      }
+    },
+    "errores": []
+  },
+  "respuestas": {
+    "respuestas": 153,
+    "tasa_inventadas": 0.0,
+    "respuestas_con_invento": 0,
+    "inventos_por_tipo": {},
+    "respuestas_evasivas": 0,
+    "preguntas_sin_informacion_ignoradas": 3,
+    "abstencion_correcta": 0.7857142857142857,
+    "preguntas_sin_informacion": 14,
+    "cobertura_menciones": 0.9696969696969697,
+    "turnos_con_mencion_completa": 0.9672131147540983,
+    "detalle_inventos": []
+  }
+}

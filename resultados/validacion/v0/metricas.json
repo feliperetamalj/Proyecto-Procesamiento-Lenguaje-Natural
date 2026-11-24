@@ -1,0 +1,593 @@
+{
+  "conversaciones": 20,
+  "turnos": 47,
+  "errores_de_ejecucion": 0,
+  "segundos_por_turno": 0.0002127659574468085,
+  "intencion": {
+    "accuracy": 0.0425531914893617,
+    "macro_f1": 0.007421150278293135,
+    "por_clase": {
+      "saludo": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 3
+      },
+      "despedida": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 3
+      },
+      "comprar_pasaje": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 15
+      },
+      "consultar_horario": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 4
+      },
+      "consultar_precio": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 4
+      },
+      "cambiar_pasaje": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 4
+      },
+      "devolver_pasaje": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 4
+      },
+      "equipaje_mascotas": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 3
+      },
+      "estado_tren": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 1
+      },
+      "reclamo": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 4
+      },
+      "fuera_de_alcance": {
+        "precision": 0.0425531914893617,
+        "recall": 1.0,
+        "f1": 0.08163265306122448,
+        "soporte": 2
+      }
+    },
+    "confusion": {
+      "cambiar_pasaje -> fuera_de_alcance": 4,
+      "comprar_pasaje -> fuera_de_alcance": 15,
+      "consultar_horario -> fuera_de_alcance": 4,
+      "consultar_precio -> fuera_de_alcance": 4,
+      "despedida -> fuera_de_alcance": 3,
+      "devolver_pasaje -> fuera_de_alcance": 4,
+      "equipaje_mascotas -> fuera_de_alcance": 3,
+      "estado_tren -> fuera_de_alcance": 1,
+      "reclamo -> fuera_de_alcance": 4,
+      "saludo -> fuera_de_alcance": 3
+    }
+  },
+  "intencion_por_tema": {
+    "cambiar_pasaje": 0.0,
+    "comprar_pasaje": 0.0,
+    "consultar_horario": 0.0,
+    "consultar_precio": 0.0,
+    "devolver_pasaje": 0.0,
+    "equipaje_mascotas": 0.0,
+    "estado_tren": 0.0,
+    "fuera_de_alcance": 1.0,
+    "mixta": 0.0,
+    "reclamo": 0.0,
+    "saludo": 0.0
+  },
+  "datos": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "por_campo": {
+      "origen": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 9
+      },
+      "destino": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 11
+      },
+      "fecha": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 7
+      },
+      "hora": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 6
+      },
+      "pasajeros": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 6
+      },
+      "tarifa": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 7
+      },
+      "clase": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 4
+      },
+      "rut": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 8
+      },
+      "correo": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 4
+      },
+      "codigo_reserva": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 4
+      },
+      "nombre": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 1
+      }
+    },
+    "errores": [
+      {
+        "id": "V01-1",
+        "campo": "destino",
+        "real": "San Fernando",
+        "predicho": null
+      },
+      {
+        "id": "V01-2",
+        "campo": "origen",
+        "real": "Santiago",
+        "predicho": null
+      },
+      {
+        "id": "V01-2",
+        "campo": "fecha",
+        "real": "2026-11-30",
+        "predicho": null
+      },
+      {
+        "id": "V01-3",
+        "campo": "hora",
+        "real": "14:00",
+        "predicho": null
+      },
+      {
+        "id": "V01-4",
+        "campo": "pasajeros",
+        "real": 4,
+        "predicho": null
+      },
+      {
+        "id": "V01-4",
+        "campo": "tarifa",
+        "real": "adulto",
+        "predicho": null
+      },
+      {
+        "id": "V01-4",
+        "campo": "clase",
+        "real": "preferente",
+        "predicho": null
+      },
+      {
+        "id": "V01-5",
+        "campo": "rut",
+        "real": "17234567-0",
+        "predicho": null
+      },
+      {
+        "id": "V01-5",
+        "campo": "correo",
+        "real": "cami.rojas@gmail.com",
+        "predicho": null
+      },
+      {
+        "id": "V02-1",
+        "campo": "origen",
+        "real": "Parral",
+        "predicho": null
+      },
+      {
+        "id": "V02-1",
+        "campo": "destino",
+        "real": "Santiago",
+        "predicho": null
+      },
+      {
+        "id": "V02-1",
+        "campo": "fecha",
+        "real": "2026-11-26",
+        "predicho": null
+      },
+      {
+        "id": "V02-1",
+        "campo": "tarifa",
+        "real": "adulto_mayor",
+        "predicho": null
+      },
+      {
+        "id": "V02-3",
+        "campo": "hora",
+        "real": "10:35",
+        "predicho": null
+      },
+      {
+        "id": "V02-3",
+        "campo": "pasajeros",
+        "real": 1,
+        "predicho": null
+      },
+      {
+        "id": "V02-3",
+        "campo": "clase",
+        "real": "estandar",
+        "predicho": null
+      },
+      {
+        "id": "V02-4",
+        "campo": "rut",
+        "real": "13579246-2",
+        "predicho": null
+      },
+      {
+        "id": "V02-4",
+        "campo": "correo",
+        "real": "pedro.munoz@gmail.com",
+        "predicho": null
+      },
+      {
+        "id": "V03-1",
+        "campo": "origen",
+        "real": "Chillán",
+        "predicho": null
+      },
+      {
+        "id": "V03-1",
+        "campo": "destino",
+        "real": "Santiago",
+        "predicho": null
+      },
+      {
+        "id": "V03-1",
+        "campo": "fecha",
+        "real": "2026-11-28",
+        "predicho": null
+      },
+      {
+        "id": "V04-1",
+        "campo": "origen",
+        "real": "Rancagua",
+        "predicho": null
+      },
+      {
+        "id": "V04-1",
+        "campo": "destino",
+        "real": "Chillán",
+        "predicho": null
+      },
+      {
+        "id": "V05-1",
+        "campo": "origen",
+        "real": "Linares",
+        "predicho": null
+      },
+      {
+        "id": "V05-1",
+        "campo": "destino",
+        "real": "Talca",
+        "predicho": null
+      },
+      {
+        "id": "V05-1",
+        "campo": "pasajeros",
+        "real": 1,
+        "predicho": null
+      },
+      {
+        "id": "V05-1",
+        "campo": "tarifa",
+        "real": "nino",
+        "predicho": null
+      },
+      {
+        "id": "V05-2",
+        "campo": "tarifa",
+        "real": "adulto",
+        "predicho": null
+      },
+      {
+        "id": "V06-1",
+        "campo": "origen",
+        "real": "Santiago",
+        "predicho": null
+      },
+      {
+        "id": "V06-1",
+        "campo": "destino",
+        "real": "Talca",
+        "predicho": null
+      },
+      {
+        "id": "V06-1",
+        "campo": "pasajeros",
+        "real": 3,
+        "predicho": null
+      },
+      {
+        "id": "V06-1",
+        "campo": "tarifa",
+        "real": "estudiante",
+        "predicho": null
+      },
+      {
+        "id": "V07-1",
+        "campo": "codigo_reserva",
+        "real": "RS-44120",
+        "predicho": null
+      },
+      {
+        "id": "V07-2",
+        "campo": "rut",
+        "real": "16783092-7",
+        "predicho": null
+      },
+      {
+        "id": "V07-3",
+        "campo": "hora",
+        "real": "13:00",
+        "predicho": null
+      },
+      {
+        "id": "V09-1",
+        "campo": "codigo_reserva",
+        "real": "RS-10234",
+        "predicho": null
+      },
+      {
+        "id": "V09-2",
+        "campo": "rut",
+        "real": "12345678-5",
+        "predicho": null
+      },
+      {
+        "id": "V12-1",
+        "campo": "origen",
+        "real": "Curicó",
+        "predicho": null
+      },
+      {
+        "id": "V12-1",
+        "campo": "destino",
+        "real": "Santiago",
+        "predicho": null
+      },
+      {
+        "id": "V13-1",
+        "campo": "destino",
+        "real": "Talca",
+        "predicho": null
+      },
+      {
+        "id": "V13-1",
+        "campo": "hora",
+        "real": "18:30",
+        "predicho": null
+      },
+      {
+        "id": "V14-2",
+        "campo": "rut",
+        "real": "15678901-1",
+        "predicho": null
+      },
+      {
+        "id": "V14-2",
+        "campo": "codigo_reserva",
+        "real": "RS-58077",
+        "predicho": null
+      },
+      {
+        "id": "V14-2",
+        "campo": "nombre",
+        "real": "Pedro Soto",
+        "predicho": null
+      },
+      {
+        "id": "V16-1",
+        "campo": "destino",
+        "real": "Temuco",
+        "predicho": null
+      },
+      {
+        "id": "V17-2",
+        "campo": "origen",
+        "real": "Santiago",
+        "predicho": null
+      },
+      {
+        "id": "V17-2",
+        "campo": "destino",
+        "real": "Parral",
+        "predicho": null
+      },
+      {
+        "id": "V17-2",
+        "campo": "clase",
+        "real": "preferente",
+        "predicho": null
+      },
+      {
+        "id": "V17-3",
+        "campo": "fecha",
+        "real": "2026-11-25",
+        "predicho": null
+      },
+      {
+        "id": "V17-3",
+        "campo": "hora",
+        "real": "18:30",
+        "predicho": null
+      },
+      {
+        "id": "V17-3",
+        "campo": "pasajeros",
+        "real": 2,
+        "predicho": null
+      },
+      {
+        "id": "V17-4",
+        "campo": "tarifa",
+        "real": "adulto",
+        "predicho": null
+      },
+      {
+        "id": "V17-5",
+        "campo": "rut",
+        "real": "21345678-4",
+        "predicho": null
+      },
+      {
+        "id": "V17-5",
+        "campo": "correo",
+        "real": "andres.v@gmail.com",
+        "predicho": null
+      },
+      {
+        "id": "V18-1",
+        "campo": "origen",
+        "real": "Chillán",
+        "predicho": null
+      },
+      {
+        "id": "V18-1",
+        "campo": "destino",
+        "real": "Talca",
+        "predicho": null
+      },
+      {
+        "id": "V18-1",
+        "campo": "fecha",
+        "real": "2026-12-28",
+        "predicho": null
+      },
+      {
+        "id": "V18-2",
+        "campo": "fecha",
+        "real": "2026-12-20",
+        "predicho": null
+      },
+      {
+        "id": "V18-3",
+        "campo": "hora",
+        "real": "09:00",
+        "predicho": null
+      },
+      {
+        "id": "V18-3",
+        "campo": "pasajeros",
+        "real": 1,
+        "predicho": null
+      },
+      {
+        "id": "V18-3",
+        "campo": "tarifa",
+        "real": "estudiante",
+        "predicho": null
+      },
+      {
+        "id": "V18-3",
+        "campo": "clase",
+        "real": "estandar",
+        "predicho": null
+      },
+      {
+        "id": "V18-4",
+        "campo": "rut",
+        "real": "19876012-9",
+        "predicho": null
+      },
+      {
+        "id": "V18-4",
+        "campo": "correo",
+        "real": "vale.d@gmail.com",
+        "predicho": null
+      },
+      {
+        "id": "V19-2",
+        "campo": "fecha",
+        "real": "2026-11-23",
+        "predicho": null
+      },
+      {
+        "id": "V19-3",
+        "campo": "rut",
+        "real": "19456321-3",
+        "predicho": null
+      },
+      {
+        "id": "V19-3",
+        "campo": "codigo_reserva",
+        "real": "RS-31502",
+        "predicho": null
+      }
+    ]
+  },
+  "respuestas": {
+    "respuestas": 47,
+    "tasa_inventadas": 0.0,
+    "respuestas_con_invento": 0,
+    "inventos_por_tipo": {},
+    "respuestas_evasivas": 47,
+    "preguntas_sin_informacion_ignoradas": 3,
+    "abstencion_correcta": 0.0,
+    "preguntas_sin_informacion": 3,
+    "cobertura_menciones": 0.0,
+    "turnos_con_mencion_completa": 0.0,
+    "detalle_inventos": []
+  }
+}

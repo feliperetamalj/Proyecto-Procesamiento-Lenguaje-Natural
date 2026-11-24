@@ -1,0 +1,417 @@
+{
+  "conversaciones": 62,
+  "turnos": 153,
+  "errores_de_ejecucion": 0,
+  "segundos_por_turno": 8.283790849673203,
+  "intencion": {
+    "accuracy": 0.8758169934640523,
+    "macro_f1": 0.8610889909830356,
+    "por_clase": {
+      "saludo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 6
+      },
+      "despedida": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 16
+      },
+      "comprar_pasaje": {
+        "precision": 0.8461538461538461,
+        "recall": 0.9565217391304348,
+        "f1": 0.8979591836734695,
+        "soporte": 46
+      },
+      "consultar_horario": {
+        "precision": 0.5714285714285714,
+        "recall": 0.7272727272727273,
+        "f1": 0.64,
+        "soporte": 11
+      },
+      "consultar_precio": {
+        "precision": 1.0,
+        "recall": 0.7692307692307693,
+        "f1": 0.8695652173913044,
+        "soporte": 13
+      },
+      "cambiar_pasaje": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 14
+      },
+      "devolver_pasaje": {
+        "precision": 0.7857142857142857,
+        "recall": 0.9166666666666666,
+        "f1": 0.8461538461538461,
+        "soporte": 12
+      },
+      "equipaje_mascotas": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "soporte": 10
+      },
+      "estado_tren": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8000000000000002,
+        "soporte": 5
+      },
+      "reclamo": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1": 0.8235294117647058,
+        "soporte": 10
+      },
+      "fuera_de_alcance": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6,
+        "f1": 0.7058823529411764,
+        "soporte": 10
+      }
+    },
+    "confusion": {
+      "comprar_pasaje -> consultar_horario": 2,
+      "consultar_horario -> comprar_pasaje": 2,
+      "consultar_horario -> estado_tren": 1,
+      "consultar_precio -> comprar_pasaje": 3,
+      "devolver_pasaje -> consultar_horario": 1,
+      "equipaje_mascotas -> comprar_pasaje": 1,
+      "equipaje_mascotas -> fuera_de_alcance": 1,
+      "estado_tren -> consultar_horario": 1,
+      "fuera_de_alcance -> comprar_pasaje": 2,
+      "fuera_de_alcance -> consultar_horario": 2,
+      "reclamo -> devolver_pasaje": 3
+    }
+  },
+  "intencion_por_tema": {
+    "cambiar_pasaje": 1.0,
+    "comprar_pasaje": 0.9787234042553191,
+    "consultar_horario": 0.75,
+    "consultar_precio": 0.7692307692307693,
+    "devolver_pasaje": 0.9,
+    "equipaje_mascotas": 0.875,
+    "estado_tren": 0.75,
+    "fuera_de_alcance": 0.6,
+    "mixta": 0.9166666666666666,
+    "reclamo": 0.6666666666666666,
+    "saludo": 1.0
+  },
+  "datos": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "por_campo": {
+      "origen": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 29
+      },
+      "destino": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 34
+      },
+      "fecha": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 25
+      },
+      "hora": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 18
+      },
+      "pasajeros": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 16
+      },
+      "tarifa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 18
+      },
+      "clase": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 16
+      },
+      "rut": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 26
+      },
+      "correo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 14
+      },
+      "codigo_reserva": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 12
+      },
+      "nombre": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 3
+      }
+    },
+    "errores": []
+  },
+  "respuestas": {
+    "respuestas": 153,
+    "tasa_inventadas": 0.13071895424836602,
+    "respuestas_con_invento": 20,
+    "inventos_por_tipo": {
+      "correo": 13,
+      "hora": 3,
+      "dinero": 3,
+      "codigo": 1
+    },
+    "respuestas_evasivas": 0,
+    "preguntas_sin_informacion_ignoradas": 0,
+    "abstencion_correcta": 1.0,
+    "preguntas_sin_informacion": 14,
+    "cobertura_menciones": 0.3484848484848485,
+    "turnos_con_mencion_completa": 0.3770491803278688,
+    "detalle_inventos": [
+      {
+        "id": "C01-1",
+        "usuario": "Hola, buenas tardes",
+        "respuesta": "Buenas tardes. ¡Bienvenido a RielSur! ¿En qué puedo ayudarle hoy? Recuerde que estamos disponibles de 08:00 a 22:00, todos los días, al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C05-2",
+        "usuario": "A las 18:30",
+        "respuesta": "Lamentablemente, no tengo información sobre la disponibilidad de pasajes para el 30 de noviembre a las 18:30 desde Santiago a Curicó en clase preferente para 3 pasajeros.  Hoy es 24 de noviembre de 2026, y la fecha de salida ya ha pasado.  Para poder realizar su compra, le recomiendo que se ponga en contacto con nosotros a través del teléfono +56 2 2000 0000 o por correo electrónico a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C05-3",
+        "usuario": "Adultos los tres",
+        "respuesta": "Entiendo, desea adquirir 3 pasajes en clase preferente de Santiago a Curicó para el 30 de noviembre a las 18:30. La tarifa para este tramo es de $9000 por pasajero, por lo que el total sería de $27000. No tengo información sobre la disponibilidad de estos pasajes en este momento. Para poder realizar la compra, le recomiendo que se ponga en contacto con nosotros a través del teléfono +56 2 2000 0000 o por correo electrónico a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C05-4",
+        "usuario": "Mi nombre es Andrés Vidal, rut 21345678-4, correo andres.vidal@outlook.com",
+        "respuesta": "Estimado Andrés Vidal,\n\nGracias por proporcionar la información. Lamentablemente, ya no hay disponibilidad de pasajes en clase preferente de Santiago a Curicó para el 30 de noviembre a las 18:30 para 3 adultos. La fecha ya ha pasado y los pasajes se agotan rápidamente.\n\nPuede contactarnos al teléfono +56 2 2000 0000 o por correo electrónico a atención@rielsur.cl para verificar si hay alguna posibilidad de reserva en otras fechas o horarios.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C05-5",
+        "usuario": "Listo, gracias",
+        "respuesta": "Entendido, Andrés. Gracias por confirmar su intención de despedida. Le agradecemos su preferencia por RielSur. Si tiene alguna otra consulta en el futuro, no dude en contactarnos al +56 2 2000 0000 o a atención@rielsur.cl. ¡Que tenga un buen día!",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C06-1",
+        "usuario": "Hola",
+        "respuesta": "¡Hola! Buenos días, bienvenido a RielSur. ¿En qué puedo ayudarle hoy? Recuerde que estamos disponibles de 08:00 a 22:00, todos los días, al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C07-2",
+        "usuario": "¿Qué horarios hay ese día?",
+        "respuesta": "¡Buenas tardes! Efectivamente, hoy es 24 de noviembre de 2026.  Para el domingo 29 de noviembre de 2026, tenemos los siguientes horarios disponibles para dos estudiantes viajando de Talca a Chillán:\n\n*   **08:30 AM:** Salida de Talca a Chillán.\n\nPor favor, tenga en cuenta que esta es la única salida disponible para ese día. ¿Desea confirmar la reserva para esta salida?",
+        "no_respaldado": [
+          [
+            "hora",
+            "08:30"
+          ]
+        ]
+      },
+      {
+        "id": "C08-3",
+        "usuario": "Estándar. Rut 16543210-K, correo profe.lagos@colegio.cl",
+        "respuesta": "Perfecto, confirmo la compra de 6 pasajes de estudiante para el día 10 de diciembre a las 07:30 desde Santiago a Chillán. El RUT del pasajero es 16543210-K y su correo electrónico es profe.lagos@colegio.cl. La tarifa por pasaje es de 2660 CLP.  El total de la compra es de 15960 CLP.  Para completar la reserva, por favor, confirme su intención de proceder con esta compra.  Puede hacerlo llamando al +56 2 2000 0000 o visitando www.rielsur.cl.",
+        "no_respaldado": [
+          [
+            "dinero",
+            "15960 CLP"
+          ]
+        ]
+      },
+      {
+        "id": "C13-2",
+        "usuario": "Y el último llega a Santiago a qué hora?",
+        "respuesta": "Buenas tardes. El último viaje disponible de Talca a Santiago para el sábado 28 de noviembre de 2026 es a las 22:30. Para confirmar la disponibilidad y los detalles de la tarifa, puede visitar nuestra página web en www.rielsur.cl o llamar al +56 2 2000 0000.",
+        "no_respaldado": [
+          [
+            "hora",
+            "22:30"
+          ]
+        ]
+      },
+      {
+        "id": "C17-1",
+        "usuario": "Necesito llegar a Chillán antes de las 3 de la tarde el lunes, saliendo de Santiago. ¿Qué tren me sirve?",
+        "respuesta": "Buenas tardes. Entiendo que desea viajar de Santiago a Chillán antes de las 15:00 el lunes 2026-11-30. Tenemos trenes que salen de Santiago a Chillán el lunes con salida a las 09:00, 14:00 y 18:30. El tren que sale a las 09:00 llegaría a Chillán a las 12:30, y el que sale a las 14:00 llegaría a las 17:00, por lo que el de las 18:30 no le sirve. \n\nPara confirmar la disponibilidad y el precio, ¿podría indicarme si prefiere la tarifa estándar o la tarifa preferente?",
+        "no_respaldado": [
+          [
+            "hora",
+            "15:00"
+          ]
+        ]
+      },
+      {
+        "id": "C20-2",
+        "usuario": "Y si son 2?",
+        "respuesta": "Entiendo, desea confirmar el precio para 2 adultos mayores en el tramo Curicó a Santiago. El precio total para este viaje sería de $12360, considerando la tarifa de adulto mayor con descuento del 40%.  Para confirmar su compra, por favor, proporcione sus datos de contacto y el método de pago que desea utilizar. Puede contactarnos al +56 2 2000 0000 o enviarnos un correo a atencion@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "dinero",
+            "$12360"
+          ]
+        ]
+      },
+      {
+        "id": "C23-1",
+        "usuario": "¿Cuánto vale el pasaje de Talca a Linares un domingo?",
+        "respuesta": "Buenas tardes. El pasaje de Talca a Linares un domingo tiene un costo de $10,300 para tarifa estándar y $16,500 para tarifa preferente. Recuerde que el precio es por pasajero y por tramo. Si tiene alguna otra pregunta, no dude en consultarnos. Puede contactarnos al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C23-2",
+        "usuario": "¿Y en preferente?",
+        "respuesta": "Buenas tardes. Para el viaje de Talca a Linares en tarifa preferente, el costo es de $16,500 por pasajero. ¿En qué puedo ayudarle más? Puede contactarnos al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C24-4",
+        "usuario": "Ok, dale",
+        "respuesta": "Perfecto, señor/a.  Con gusto le confirmo que el cambio al pasaje de Santiago a Talca para el 5 de diciembre a las 13:00 está realizado.  El nuevo código de reserva es RS-98765.  Le enviaremos un correo electrónico de confirmación con los detalles actualizados a la dirección asociada a su reserva.  Si tiene alguna otra pregunta, no dude en contactarnos al +56 2 2000 0000 o a través de correo electrónico en atencion@rielsur.cl. ¡Que tenga un buen viaje!",
+        "no_respaldado": [
+          [
+            "codigo",
+            "RS-98765"
+          ]
+        ]
+      },
+      {
+        "id": "C35-1",
+        "usuario": "Puedo viajar con mi perro? Pesa como 5 kilos",
+        "respuesta": "Buenas tardes. Entiendo su pregunta sobre si puede viajar con su perro. Según nuestra información, sí, está permitido viajar con perros y gatos de hasta 8 kg en transportín cerrado, siempre y cuando avise con 48 horas de anticipación. El precio por tramo es de $2500. Por favor, tenga en cuenta que solo se permite un animal por pasajero. Si tiene alguna otra pregunta, no dude en consultarnos. Puede contactarnos al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C35-2",
+        "usuario": "¿Tiene que ir en transportín?",
+        "respuesta": "Lamento informarle que no tengo esa información en este momento. Puede contactarnos al +56 2 2000 0000 o a atención@rielsur.cl para obtener más detalles.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C55-2",
+        "usuario": "¿Cuánto sale de Santiago a Talca?",
+        "respuesta": "Buenas noches. El precio para viajar de Santiago a Talca, según nuestra tarifa estándar, es de 14.000 pesos por pasajero y por tramo. Si desea viajar en tarifa preferente, el precio sería de 22.000 pesos por pasajero y por tramo. ¿Desea confirmar la reserva para hoy, 2026-11-24?",
+        "no_respaldado": [
+          [
+            "dinero",
+            "22.000 pesos"
+          ]
+        ]
+      },
+      {
+        "id": "C58-1",
+        "usuario": "Hola",
+        "respuesta": "¡Hola! Buenos días, bienvenido a RielSur. ¿En qué puedo ayudarle hoy? Recuerde que estamos disponibles de 08:00 a 22:00, todos los días, al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C58-2",
+        "usuario": "Quiero reclamar porque perdieron mi maleta",
+        "respuesta": "Entiendo, lamentamos mucho que haya perdido su maleta. Para poder iniciar el reclamo, necesitamos algunos datos para poder localizar su reserva. Por favor, proporcione el código de reserva y su RUT. También, ¿podría describir brevemente el contenido de la maleta y el lugar donde la perdió?  Puede enviar esta información a atención@rielsur.cl o llamarnos al +56 2 2000 0000.  Nuestro plazo de respuesta para este tipo de reclamos es de 5 días hábiles.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "C58-4",
+        "usuario": "Gracias",
+        "respuesta": "¡De nada! Que tenga un excelente día y que viaje bien. Si necesita algo en el futuro, no dude en contactarnos al +56 2 2000 0000 o a atención@rielsur.cl. ¡Hasta luego!",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      }
+    ]
+  }
+}

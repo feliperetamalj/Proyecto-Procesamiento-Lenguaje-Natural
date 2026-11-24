@@ -1,0 +1,364 @@
+{
+  "sistema": "llm_respuestas",
+  "descripcion": "Revisión a mano de las 153 respuestas de la versión que redacta con gemma3:4b. Cuenta como inventada toda respuesta que afirma algo que contradice la base o que no está en ella: cifras, horarios, políticas, disponibilidad, acciones que el sistema no hace o datos de la conversación cambiados.",
+  "respuestas": 153,
+  "inventadas": 69,
+  "inventadas_sin_contar_correo_mal_escrito": 61,
+  "por_categoria": {
+    "correo_mal_escrito": 8,
+    "precio": 16,
+    "horario": 13,
+    "politica": 16,
+    "disponibilidad_o_fecha": 11,
+    "accion_que_no_ocurre": 3,
+    "dato_de_la_conversacion_erroneo": 2
+  },
+  "detector_automatico_marco": 20,
+  "detalle": [
+    {
+      "id": "C01-1",
+      "categoria": "correo_mal_escrito",
+      "nota": "escribe atención@rielsur.cl con tilde, un correo que no existe"
+    },
+    {
+      "id": "C01-5",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "dice que no puede vender porque la fecha 'está en el presente'"
+    },
+    {
+      "id": "C02-1",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "dice que la fecha no está disponible; el 3 de diciembre a las 14:00 existe"
+    },
+    {
+      "id": "C02-2",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "asegura que hay un pasaje disponible; la base no tiene disponibilidad"
+    },
+    {
+      "id": "C03-5",
+      "categoria": "politica",
+      "nota": "inventa que se puede pagar en ventanilla llamando por teléfono"
+    },
+    {
+      "id": "C03-6",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "dice que el viaje de mañana ya ocurrió"
+    },
+    {
+      "id": "C03-7",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "repite que la fecha ya pasó"
+    },
+    {
+      "id": "C04-3",
+      "categoria": "dato_de_la_conversacion_erroneo",
+      "nota": "habla de dos pasajeros, define mal el RUT y pide un teléfono que la base no pide"
+    },
+    {
+      "id": "C04-4",
+      "categoria": "accion_que_no_ocurre",
+      "nota": "dice que la compra quedó registrada; la base dice que falta pagar con el enlace"
+    },
+    {
+      "id": "C05-2",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "dice que la fecha ya pasó"
+    },
+    {
+      "id": "C05-3",
+      "categoria": "correo_mal_escrito",
+      "nota": "escribe atención@rielsur.cl con tilde, un correo que no existe"
+    },
+    {
+      "id": "C05-4",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "dice que no hay disponibilidad y que los pasajes se agotan"
+    },
+    {
+      "id": "C05-5",
+      "categoria": "correo_mal_escrito",
+      "nota": "escribe atención@rielsur.cl con tilde, un correo que no existe"
+    },
+    {
+      "id": "C06-1",
+      "categoria": "correo_mal_escrito",
+      "nota": "escribe atención@rielsur.cl con tilde, un correo que no existe"
+    },
+    {
+      "id": "C06-2",
+      "categoria": "horario",
+      "nota": "ofrece un tren a las 09:00 que no existe"
+    },
+    {
+      "id": "C06-5",
+      "categoria": "accion_que_no_ocurre",
+      "nota": "confirma la compra como hecha"
+    },
+    {
+      "id": "C07-2",
+      "categoria": "horario",
+      "nota": "dice que la única salida es a las 08:30; son 11:00, 15:30 y 20:00"
+    },
+    {
+      "id": "C07-3",
+      "categoria": "horario",
+      "nota": "insiste en que hay una sola salida"
+    },
+    {
+      "id": "C08-1",
+      "categoria": "politica",
+      "nota": "dice que atienden de lunes a viernes; la base dice todos los días"
+    },
+    {
+      "id": "C08-2",
+      "categoria": "precio",
+      "nota": "tarifa de estudiante de $2.660; la correcta es $7.210"
+    },
+    {
+      "id": "C08-3",
+      "categoria": "precio",
+      "nota": "total de $15.960; el correcto es $43.260"
+    },
+    {
+      "id": "C09-1",
+      "categoria": "precio",
+      "nota": "Santiago a Talca a $14.000; cuesta $7.000"
+    },
+    {
+      "id": "C10-2",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "asume que el viaje es hoy"
+    },
+    {
+      "id": "C11-1",
+      "categoria": "precio",
+      "nota": "dice que sí se puede y da un precio de $2.600"
+    },
+    {
+      "id": "C11-2",
+      "categoria": "precio",
+      "nota": "precio de $5.600 para Santiago a Talca"
+    },
+    {
+      "id": "C11-3",
+      "categoria": "precio",
+      "nota": "repite el precio incorrecto"
+    },
+    {
+      "id": "C12-1",
+      "categoria": "horario",
+      "nota": "primer tren a las 06:30; es a las 07:30"
+    },
+    {
+      "id": "C12-2",
+      "categoria": "horario",
+      "nota": "llegada a las 14:30; el primer tren llega a las 11:30"
+    },
+    {
+      "id": "C13-1",
+      "categoria": "horario",
+      "nota": "primer tren 08:30 y último 22:00; son 10:30, 15:00 y 19:30"
+    },
+    {
+      "id": "C13-2",
+      "categoria": "horario",
+      "nota": "último llega a las 22:30; llega a las 22:00"
+    },
+    {
+      "id": "C14-1",
+      "categoria": "horario",
+      "nota": "dos salidas diarias y viaje de 4,5 a 6 horas; son cuatro salidas y 2,5 horas"
+    },
+    {
+      "id": "C15-1",
+      "categoria": "horario",
+      "nota": "salidas de Rancagua a las 08:40 y 15:40; son 14:50 y 19:20 en la tarde"
+    },
+    {
+      "id": "C16-2",
+      "categoria": "horario",
+      "nota": "pasa por Linares a las 13:30; pasa a las 17:00"
+    },
+    {
+      "id": "C17-1",
+      "categoria": "horario",
+      "nota": "salidas a las 09:00, 14:00 y 18:30 con llegadas inventadas"
+    },
+    {
+      "id": "C19-1",
+      "categoria": "precio",
+      "nota": "precio con TNE de $2.660; es $3.640"
+    },
+    {
+      "id": "C20-1",
+      "categoria": "precio",
+      "nota": "adulto mayor Curicó a Santiago $6.180; es $3.360"
+    },
+    {
+      "id": "C20-2",
+      "categoria": "precio",
+      "nota": "total $12.360; es $6.720"
+    },
+    {
+      "id": "C23-1",
+      "categoria": "precio",
+      "nota": "Talca a Linares $10.300; es $2.600"
+    },
+    {
+      "id": "C23-2",
+      "categoria": "precio",
+      "nota": "preferente $16.500; es $4.200"
+    },
+    {
+      "id": "C24-4",
+      "categoria": "accion_que_no_ocurre",
+      "nota": "inventa un código de reserva nuevo, RS-98765"
+    },
+    {
+      "id": "C25-2",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "dice que el plazo de cambio ya venció"
+    },
+    {
+      "id": "C26-1",
+      "categoria": "politica",
+      "nota": "da a entender que se puede cambiar más de una vez"
+    },
+    {
+      "id": "C26-2",
+      "categoria": "politica",
+      "nota": "dice que se puede cambiar hasta las 14:00 de hoy"
+    },
+    {
+      "id": "C29-2",
+      "categoria": "politica",
+      "nota": "devolución de 50% y un cargo de $1.000 que no existe"
+    },
+    {
+      "id": "C29-3",
+      "categoria": "politica",
+      "nota": "repite el cargo de $1.000"
+    },
+    {
+      "id": "C30-1",
+      "categoria": "politica",
+      "nota": "dice que la anulación tiene un cargo de 50%"
+    },
+    {
+      "id": "C30-2",
+      "categoria": "politica",
+      "nota": "dice que ya pasó el plazo"
+    },
+    {
+      "id": "C31-1",
+      "categoria": "politica",
+      "nota": "con 3 horas de anticipación dice que no hay reembolso; corresponde 50%"
+    },
+    {
+      "id": "C32-1",
+      "categoria": "politica",
+      "nota": "inventa un procedimiento por correo"
+    },
+    {
+      "id": "C35-1",
+      "categoria": "politica",
+      "nota": "exige avisar con 48 horas para llevar mascota"
+    },
+    {
+      "id": "C35-2",
+      "categoria": "correo_mal_escrito",
+      "nota": "escribe atención@rielsur.cl con tilde, un correo que no existe"
+    },
+    {
+      "id": "C36-1",
+      "categoria": "politica",
+      "nota": "dice que no se aceptan bicicletas; se aceptan plegadas"
+    },
+    {
+      "id": "C37-1",
+      "categoria": "politica",
+      "nota": "no dice que un perro de 30 kg no puede ir y exige aviso de 48 horas"
+    },
+    {
+      "id": "C37-2",
+      "categoria": "politica",
+      "nota": "exige aviso y transportín al perro de asistencia"
+    },
+    {
+      "id": "C42-1",
+      "categoria": "horario",
+      "nota": "da horarios de fin de semana para un miércoles"
+    },
+    {
+      "id": "C46-1",
+      "categoria": "politica",
+      "nota": "promete reembolso inmediato"
+    },
+    {
+      "id": "C55-2",
+      "categoria": "precio",
+      "nota": "Santiago a Talca $14.000 y $22.000; son $7.000 y $11.200"
+    },
+    {
+      "id": "C55-3",
+      "categoria": "horario",
+      "nota": "último tren a las 21:00; sale a las 18:30"
+    },
+    {
+      "id": "C55-4",
+      "categoria": "precio",
+      "nota": "total de $14.000 para un pasaje"
+    },
+    {
+      "id": "C55-5",
+      "categoria": "precio",
+      "nota": "repite el total incorrecto y dice que envió la confirmación"
+    },
+    {
+      "id": "C57-2",
+      "categoria": "dato_de_la_conversacion_erroneo",
+      "nota": "cambia el destino y la fecha de la reserva"
+    },
+    {
+      "id": "C57-3",
+      "categoria": "politica",
+      "nota": "dice que ya no se puede devolver"
+    },
+    {
+      "id": "C58-1",
+      "categoria": "correo_mal_escrito",
+      "nota": "escribe atención@rielsur.cl con tilde, un correo que no existe"
+    },
+    {
+      "id": "C58-2",
+      "categoria": "correo_mal_escrito",
+      "nota": "escribe atención@rielsur.cl con tilde, un correo que no existe"
+    },
+    {
+      "id": "C58-4",
+      "categoria": "correo_mal_escrito",
+      "nota": "escribe atención@rielsur.cl con tilde, un correo que no existe"
+    },
+    {
+      "id": "C59-1",
+      "categoria": "precio",
+      "nota": "precio estudiante $8.100; es $5.670"
+    },
+    {
+      "id": "C59-3",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "inventa que el servicio solo opera lunes, miércoles y viernes"
+    },
+    {
+      "id": "C59-4",
+      "categoria": "disponibilidad_o_fecha",
+      "nota": "repite que ese día no hay servicio"
+    },
+    {
+      "id": "C60-3",
+      "categoria": "precio",
+      "nota": "devuelve $6.180; el 90% es $5.562"
+    }
+  ]
+}

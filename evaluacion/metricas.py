@@ -49,7 +49,7 @@ def metricas_intencion(pares):
         "accuracy": aciertos / total if total else 0.0,
         "macro_f1": sum(por_clase[c]["f1"] for c in presentes) / len(presentes) if presentes else 0.0,
         "por_clase": por_clase,
-        "confusion": {f"{r} -> {p}": n for (r, p), n in sorted(matriz.items()) if r != p},
+        "confusion": {f"{r} -> {p}": n for (r, p), n in sorted(matriz.items(), key=str) if r != p},
     }
 
 

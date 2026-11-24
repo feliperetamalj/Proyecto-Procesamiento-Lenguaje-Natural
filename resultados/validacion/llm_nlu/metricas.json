@@ -1,0 +1,299 @@
+{
+  "conversaciones": 20,
+  "turnos": 47,
+  "errores_de_ejecucion": 0,
+  "segundos_por_turno": 8.072247191011236,
+  "intencion": {
+    "accuracy": 0.9148936170212766,
+    "macro_f1": 0.8436184505150023,
+    "por_clase": {
+      "saludo": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "soporte": 3
+      },
+      "despedida": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "soporte": 3
+      },
+      "comprar_pasaje": {
+        "precision": 1.0,
+        "recall": 0.9333333333333333,
+        "f1": 0.9655172413793104,
+        "soporte": 15
+      },
+      "consultar_horario": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "soporte": 4
+      },
+      "consultar_precio": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "cambiar_pasaje": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "devolver_pasaje": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "equipaje_mascotas": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "soporte": 3
+      },
+      "estado_tren": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 1
+      },
+      "reclamo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "fuera_de_alcance": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "soporte": 2
+      }
+    },
+    "confusion": {
+      "comprar_pasaje -> consultar_horario": 1,
+      "despedida -> saludo": 1,
+      "fuera_de_alcance -> consultar_horario": 1,
+      "fuera_de_alcance -> equipaje_mascotas": 1
+    }
+  },
+  "intencion_por_tema": {
+    "cambiar_pasaje": 1.0,
+    "comprar_pasaje": 0.8888888888888888,
+    "consultar_horario": 1.0,
+    "consultar_precio": 1.0,
+    "devolver_pasaje": 1.0,
+    "equipaje_mascotas": 1.0,
+    "estado_tren": 1.0,
+    "fuera_de_alcance": 0.0,
+    "mixta": 1.0,
+    "reclamo": 1.0,
+    "saludo": 0.5
+  },
+  "datos": {
+    "precision": 0.84375,
+    "recall": 0.8059701492537313,
+    "f1": 0.8244274809160305,
+    "por_campo": {
+      "origen": {
+        "precision": 0.8181818181818182,
+        "recall": 1.0,
+        "f1": 0.9,
+        "soporte": 9
+      },
+      "destino": {
+        "precision": 1.0,
+        "recall": 0.8181818181818182,
+        "f1": 0.9,
+        "soporte": 11
+      },
+      "fecha": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2857142857142857,
+        "f1": 0.2857142857142857,
+        "soporte": 7
+      },
+      "hora": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "soporte": 6
+      },
+      "pasajeros": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "soporte": 6
+      },
+      "tarifa": {
+        "precision": 1.0,
+        "recall": 0.5714285714285714,
+        "f1": 0.7272727272727273,
+        "soporte": 7
+      },
+      "clase": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "rut": {
+        "precision": 0.875,
+        "recall": 0.875,
+        "f1": 0.875,
+        "soporte": 8
+      },
+      "correo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "codigo_reserva": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "nombre": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "soporte": 1
+      }
+    },
+    "errores": [
+      {
+        "id": "V01-1",
+        "campo": "origen",
+        "real": null,
+        "predicho": "San Fernando"
+      },
+      {
+        "id": "V01-1",
+        "campo": "destino",
+        "real": "San Fernando",
+        "predicho": null
+      },
+      {
+        "id": "V01-2",
+        "campo": "fecha",
+        "real": "2026-11-30",
+        "predicho": "2026-11-25"
+      },
+      {
+        "id": "V02-1",
+        "campo": "fecha",
+        "real": "2026-11-26",
+        "predicho": "2026-11-25"
+      },
+      {
+        "id": "V02-1",
+        "campo": "pasajeros",
+        "real": null,
+        "predicho": 1
+      },
+      {
+        "id": "V02-1",
+        "campo": "nombre",
+        "real": null,
+        "predicho": "Abuelo"
+      },
+      {
+        "id": "V03-1",
+        "campo": "fecha",
+        "real": "2026-11-28",
+        "predicho": null
+      },
+      {
+        "id": "V05-1",
+        "campo": "pasajeros",
+        "real": 1,
+        "predicho": null
+      },
+      {
+        "id": "V05-1",
+        "campo": "tarifa",
+        "real": "nino",
+        "predicho": null
+      },
+      {
+        "id": "V06-1",
+        "campo": "tarifa",
+        "real": "estudiante",
+        "predicho": null
+      },
+      {
+        "id": "V07-3",
+        "campo": "fecha",
+        "real": null,
+        "predicho": "2026-11-24"
+      },
+      {
+        "id": "V09-2",
+        "campo": "rut",
+        "real": "12345678-5",
+        "predicho": "12345-5"
+      },
+      {
+        "id": "V10-1",
+        "campo": "fecha",
+        "real": null,
+        "predicho": "2026-11-24"
+      },
+      {
+        "id": "V13-1",
+        "campo": "origen",
+        "real": null,
+        "predicho": "Talca"
+      },
+      {
+        "id": "V13-1",
+        "campo": "destino",
+        "real": "Talca",
+        "predicho": null
+      },
+      {
+        "id": "V17-3",
+        "campo": "fecha",
+        "real": "2026-11-25",
+        "predicho": "2026-11-24"
+      },
+      {
+        "id": "V17-4",
+        "campo": "tarifa",
+        "real": "adulto",
+        "predicho": null
+      },
+      {
+        "id": "V18-3",
+        "campo": "hora",
+        "real": "09:00",
+        "predicho": null
+      },
+      {
+        "id": "V19-2",
+        "campo": "fecha",
+        "real": "2026-11-23",
+        "predicho": null
+      }
+    ]
+  },
+  "respuestas": {
+    "respuestas": 47,
+    "tasa_inventadas": 0.0,
+    "respuestas_con_invento": 0,
+    "inventos_por_tipo": {},
+    "respuestas_evasivas": 0,
+    "preguntas_sin_informacion_ignoradas": 1,
+    "abstencion_correcta": 0.6666666666666666,
+    "preguntas_sin_informacion": 3,
+    "cobertura_menciones": 0.6428571428571429,
+    "turnos_con_mencion_completa": 0.5652173913043478,
+    "detalle_inventos": []
+  }
+}

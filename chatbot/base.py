@@ -166,7 +166,9 @@ def normalizar_valor(campo, valor, base=None):
                          "estudiantes": "estudiante", "adulto_mayor": "adulto_mayor",
                          "tercera_edad": "adulto_mayor", "estandar": "estandar",
                          "economica": "estandar", "preferente": "preferente"}
-        return equivalencias.get(v, v)
+        v = equivalencias.get(v, v)
+        # Un valor fuera de la lista (por ejemplo "tne" que devuelve el LLM) se descarta.
+        return v if v in (TARIFAS if campo == "tarifa" else CLASES) else None
     if campo == "rut":
         return normalizar_rut(valor)
     if campo == "correo":

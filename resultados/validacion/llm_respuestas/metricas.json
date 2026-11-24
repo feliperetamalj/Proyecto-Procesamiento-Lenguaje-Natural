@@ -1,0 +1,337 @@
+{
+  "conversaciones": 20,
+  "turnos": 47,
+  "errores_de_ejecucion": 0,
+  "segundos_por_turno": 9.192340425531915,
+  "intencion": {
+    "accuracy": 0.8936170212765957,
+    "macro_f1": 0.8855746404133501,
+    "por_clase": {
+      "saludo": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "soporte": 3
+      },
+      "despedida": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 3
+      },
+      "comprar_pasaje": {
+        "precision": 0.875,
+        "recall": 0.9333333333333333,
+        "f1": 0.9032258064516129,
+        "soporte": 15
+      },
+      "consultar_horario": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "soporte": 4
+      },
+      "consultar_precio": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "cambiar_pasaje": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "soporte": 4
+      },
+      "devolver_pasaje": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "equipaje_mascotas": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "soporte": 3
+      },
+      "estado_tren": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 1
+      },
+      "reclamo": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "soporte": 4
+      },
+      "fuera_de_alcance": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "soporte": 2
+      }
+    },
+    "confusion": {
+      "cambiar_pasaje -> comprar_pasaje": 1,
+      "comprar_pasaje -> consultar_horario": 1,
+      "equipaje_mascotas -> comprar_pasaje": 1,
+      "fuera_de_alcance -> saludo": 1,
+      "reclamo -> consultar_horario": 1
+    }
+  },
+  "intencion_por_tema": {
+    "cambiar_pasaje": 0.75,
+    "comprar_pasaje": 0.8888888888888888,
+    "consultar_horario": 1.0,
+    "consultar_precio": 1.0,
+    "devolver_pasaje": 1.0,
+    "equipaje_mascotas": 0.6666666666666666,
+    "estado_tren": 1.0,
+    "fuera_de_alcance": 0.5,
+    "mixta": 1.0,
+    "reclamo": 0.6666666666666666,
+    "saludo": 1.0
+  },
+  "datos": {
+    "precision": 1.0,
+    "recall": 0.9104477611940298,
+    "f1": 0.953125,
+    "por_campo": {
+      "origen": {
+        "precision": 1.0,
+        "recall": 0.8888888888888888,
+        "f1": 0.9411764705882353,
+        "soporte": 9
+      },
+      "destino": {
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "f1": 0.9523809523809523,
+        "soporte": 11
+      },
+      "fecha": {
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.923076923076923,
+        "soporte": 7
+      },
+      "hora": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "soporte": 6
+      },
+      "pasajeros": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "soporte": 6
+      },
+      "tarifa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 7
+      },
+      "clase": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "rut": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 8
+      },
+      "correo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "codigo_reserva": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "nombre": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 1
+      }
+    },
+    "errores": [
+      {
+        "id": "V02-3",
+        "campo": "pasajeros",
+        "real": 1,
+        "predicho": null
+      },
+      {
+        "id": "V04-1",
+        "campo": "origen",
+        "real": "Rancagua",
+        "predicho": null
+      },
+      {
+        "id": "V04-1",
+        "campo": "destino",
+        "real": "Chillán",
+        "predicho": null
+      },
+      {
+        "id": "V07-3",
+        "campo": "hora",
+        "real": "13:00",
+        "predicho": null
+      },
+      {
+        "id": "V17-3",
+        "campo": "pasajeros",
+        "real": 2,
+        "predicho": null
+      },
+      {
+        "id": "V19-2",
+        "campo": "fecha",
+        "real": "2026-11-23",
+        "predicho": null
+      }
+    ]
+  },
+  "respuestas": {
+    "respuestas": 47,
+    "tasa_inventadas": 0.2127659574468085,
+    "respuestas_con_invento": 10,
+    "inventos_por_tipo": {
+      "dinero": 1,
+      "correo": 8,
+      "web": 1
+    },
+    "respuestas_evasivas": 0,
+    "preguntas_sin_informacion_ignoradas": 0,
+    "abstencion_correcta": 1.0,
+    "preguntas_sin_informacion": 3,
+    "cobertura_menciones": 0.25,
+    "turnos_con_mencion_completa": 0.30434782608695654,
+    "detalle_inventos": [
+      {
+        "id": "V05-2",
+        "usuario": "¿Y para mí que soy adulto?",
+        "respuesta": "Buenas tardes. Entiendo. Para un adulto, el precio del pasaje de Linares a Talca es de $14,000. Si tiene alguna otra pregunta, no dude en consultarnos. Puede contactarnos al +56 2 2000 0000 o enviarnos un correo a atencion@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "dinero",
+            "$14,000"
+          ]
+        ]
+      },
+      {
+        "id": "V07-1",
+        "usuario": "Buenas, me gustaría cambiar la hora de mi pasaje, el código es RS-44120",
+        "respuesta": "Buenas tardes. Entiendo que desea modificar la hora de su pasaje con código RS-44120. Sin embargo, no tengo información en tiempo real sobre el estado de los trenes ni sobre la posibilidad de realizar cambios en este momento. Le sugiero que se ponga en contacto con nosotros a través del teléfono +56 2 2000 0000 o por correo electrónico a atención@rielsur.cl para que un agente pueda asistirle con su solicitud.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "V07-2",
+        "usuario": "16783092-7",
+        "respuesta": "Buenas tardes. Entiendo que desea cambiar la hora de su pasaje con código RS-44120 y rut 16783092-7.  Según nuestra política de cambios, el plazo para realizar este tipo de modificación es hasta 2 horas antes de la salida del tren.  Dado que hoy es 2026-11-24, y su pasaje es para el 2026-12-12, lamentablemente ya no podemos realizar el cambio.  Le recomiendo contactarnos al teléfono +56 2 2000 0000 o por correo electrónico a atención@rielsur.cl para más información.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "V07-3",
+        "usuario": "Lo quiero en el tren de la 1 de la tarde, mismo día",
+        "respuesta": "Buenas tardes. Entiendo que desea modificar su pasaje con código RS-44120 y rut 16783092-7 para que viaje en el tren de la 1 de la tarde del mismo día, 2026-11-24. Sin embargo, según nuestra política, no es posible realizar cambios de horario con menos de 2 horas de anticipación a la salida del tren. Lamentablemente, no puedo procesar su solicitud en este momento. \n\nPara poder ayudarle, le sugiero que se ponga en contacto con nosotros a través del teléfono +56 2 2000 0000 o por correo electrónico a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "V08-1",
+        "usuario": "Si cambio el pasaje a uno más caro, ¿tengo que pagar la diferencia?",
+        "respuesta": "Entiendo su pregunta. Si usted cambia su pasaje a una tarifa más cara, sí, deberá pagar la diferencia entre la tarifa original y la nueva tarifa. La política de cambio de boletos establece que si el viaje nuevo es más caro, se le cobrará la diferencia, y si es más barato, no se le devolverá el dinero. \n\nPara más detalles sobre las políticas de cambio, puede consultar la sección de \"Cambio\" en nuestra página web: www.rielsur.cl/politicas o llamar al +56 2 2000 0000.",
+        "no_respaldado": [
+          [
+            "web",
+            "www.rielsur.cl/politicas"
+          ]
+        ]
+      },
+      {
+        "id": "V17-1",
+        "usuario": "Hola",
+        "respuesta": "¡Hola! Buenos días, bienvenido a RielSur. ¿En qué puedo ayudarle hoy? Recuerde que estamos disponibles de 08:00 a 22:00, todos los días, al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "V17-3",
+        "usuario": "Ok, quiero 2 para el miércoles en el tren de las 6 y media de la tarde",
+        "respuesta": "Entiendo. Sin embargo, hoy es 2026-11-24 y el miércoles es 2026-11-25. El horario que me indica es las 18:30, pero no hay un tren de las 6 y media de la tarde (18:30) que salga de Santiago a Parral. \n\n¿Le gustaría que buscara un horario diferente o me confirmara el destino y la clase para poder verificar la disponibilidad y el precio? Puede contactarnos al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "V17-4",
+        "usuario": "adultos",
+        "respuesta": "Entiendo que desea comprar dos pasajes de Santiago a Parral en clase preferente para el día 25 de noviembre de 2026 a las 18:30. Sin embargo, como mencioné anteriormente, no hay un tren que salga de Santiago a Parral a las 18:30. \n\nLa tarifa para un adulto en clase preferente de Santiago a Parral es de 14400 pesos chilenos. ¿Le gustaría que buscara un horario diferente o que confirme la disponibilidad para el día 25 de noviembre de 2026? Puede contactarnos al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "V17-5",
+        "usuario": "rut 21345678-4, correo andres.v@gmail.com",
+        "respuesta": "Entiendo, Andrés. Con gusto le ayudaré a realizar su compra. Sin embargo, debo informarle que no existe un tren que salga de Santiago a Parral a las 18:30 el día 25 de noviembre de 2026. La tarifa para dos adultos en clase preferente de Santiago a Parral es de 28800 pesos chilenos. \n\n¿Desea que busque un horario diferente o confirme la compra para esta tarifa? Puede contactarnos al +56 2 2000 0000 o a atención@rielsur.cl.",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      },
+      {
+        "id": "V17-6",
+        "usuario": "Gracias!!",
+        "respuesta": "¡De nada, Andrés! Que tenga un excelente viaje con RielSur. Si necesita algo más, no dude en contactarnos al +56 2 2000 0000 o a atención@rielsur.cl. ¡Saludos!",
+        "no_respaldado": [
+          [
+            "correo",
+            "atención@rielsur.cl"
+          ]
+        ]
+      }
+    ]
+  }
+}

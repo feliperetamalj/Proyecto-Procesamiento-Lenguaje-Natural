@@ -1,0 +1,230 @@
+{
+  "conversaciones": 20,
+  "turnos": 47,
+  "errores_de_ejecucion": 0,
+  "segundos_por_turno": 0.0,
+  "intencion": {
+    "accuracy": 0.6382978723404256,
+    "macro_f1": 0.6676066138516732,
+    "por_clase": {
+      "saludo": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "soporte": 3
+      },
+      "despedida": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "soporte": 3
+      },
+      "comprar_pasaje": {
+        "precision": 0.75,
+        "recall": 0.4,
+        "f1": 0.5217391304347827,
+        "soporte": 15
+      },
+      "consultar_horario": {
+        "precision": 0.5714285714285714,
+        "recall": 1.0,
+        "f1": 0.7272727272727273,
+        "soporte": 4
+      },
+      "consultar_precio": {
+        "precision": 0.42857142857142855,
+        "recall": 0.75,
+        "f1": 0.5454545454545454,
+        "soporte": 4
+      },
+      "cambiar_pasaje": {
+        "precision": 0.4,
+        "recall": 0.5,
+        "f1": 0.4444444444444445,
+        "soporte": 4
+      },
+      "devolver_pasaje": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "soporte": 4
+      },
+      "equipaje_mascotas": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "soporte": 3
+      },
+      "estado_tren": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "soporte": 1
+      },
+      "reclamo": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "soporte": 4
+      },
+      "fuera_de_alcance": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "soporte": 2
+      }
+    },
+    "confusion": {
+      "cambiar_pasaje -> comprar_pasaje": 1,
+      "cambiar_pasaje -> estado_tren": 1,
+      "comprar_pasaje -> cambiar_pasaje": 1,
+      "comprar_pasaje -> consultar_horario": 1,
+      "comprar_pasaje -> consultar_precio": 4,
+      "comprar_pasaje -> despedida": 1,
+      "comprar_pasaje -> estado_tren": 2,
+      "consultar_precio -> consultar_horario": 1,
+      "devolver_pasaje -> cambiar_pasaje": 1,
+      "equipaje_mascotas -> comprar_pasaje": 1,
+      "fuera_de_alcance -> saludo": 1,
+      "reclamo -> cambiar_pasaje": 1,
+      "reclamo -> consultar_horario": 1
+    }
+  },
+  "intencion_por_tema": {
+    "cambiar_pasaje": 0.5,
+    "comprar_pasaje": 0.4444444444444444,
+    "consultar_horario": 1.0,
+    "consultar_precio": 0.6666666666666666,
+    "devolver_pasaje": 0.6666666666666666,
+    "equipaje_mascotas": 0.6666666666666666,
+    "estado_tren": 1.0,
+    "fuera_de_alcance": 0.5,
+    "mixta": 0.6923076923076923,
+    "reclamo": 0.3333333333333333,
+    "saludo": 1.0
+  },
+  "datos": {
+    "precision": 1.0,
+    "recall": 0.9104477611940298,
+    "f1": 0.953125,
+    "por_campo": {
+      "origen": {
+        "precision": 1.0,
+        "recall": 0.8888888888888888,
+        "f1": 0.9411764705882353,
+        "soporte": 9
+      },
+      "destino": {
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "f1": 0.9523809523809523,
+        "soporte": 11
+      },
+      "fecha": {
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.923076923076923,
+        "soporte": 7
+      },
+      "hora": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "soporte": 6
+      },
+      "pasajeros": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "soporte": 6
+      },
+      "tarifa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 7
+      },
+      "clase": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "rut": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 8
+      },
+      "correo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "codigo_reserva": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 4
+      },
+      "nombre": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "soporte": 1
+      }
+    },
+    "errores": [
+      {
+        "id": "V02-3",
+        "campo": "pasajeros",
+        "real": 1,
+        "predicho": null
+      },
+      {
+        "id": "V04-1",
+        "campo": "origen",
+        "real": "Rancagua",
+        "predicho": null
+      },
+      {
+        "id": "V04-1",
+        "campo": "destino",
+        "real": "Chillán",
+        "predicho": null
+      },
+      {
+        "id": "V07-3",
+        "campo": "hora",
+        "real": "13:00",
+        "predicho": null
+      },
+      {
+        "id": "V17-3",
+        "campo": "pasajeros",
+        "real": 2,
+        "predicho": null
+      },
+      {
+        "id": "V19-2",
+        "campo": "fecha",
+        "real": "2026-11-23",
+        "predicho": null
+      }
+    ]
+  },
+  "respuestas": {
+    "respuestas": 47,
+    "tasa_inventadas": 0.0,
+    "respuestas_con_invento": 0,
+    "inventos_por_tipo": {},
+    "respuestas_evasivas": 0,
+    "preguntas_sin_informacion_ignoradas": 1,
+    "abstencion_correcta": 0.6666666666666666,
+    "preguntas_sin_informacion": 3,
+    "cobertura_menciones": 0.6071428571428571,
+    "turnos_con_mencion_completa": 0.5217391304347826,
+    "detalle_inventos": []
+  }
+}
