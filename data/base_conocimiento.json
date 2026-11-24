@@ -1,0 +1,601 @@
+{
+  "empresa": {
+    "nombre": "RielSur",
+    "nota": "Empresa ficticia creada para este proyecto.",
+    "ruta": "Santiago - Chillán",
+    "telefono": "+56 2 2000 0000",
+    "horario_telefono": "todos los días de 08:00 a 22:00",
+    "correo": "atencion@rielsur.cl",
+    "web": "www.rielsur.cl"
+  },
+  "estaciones": [
+    {
+      "nombre": "Santiago",
+      "km_desde_santiago": 0,
+      "minutos_desde_santiago": 0
+    },
+    {
+      "nombre": "Rancagua",
+      "km_desde_santiago": 82,
+      "minutos_desde_santiago": 50
+    },
+    {
+      "nombre": "San Fernando",
+      "km_desde_santiago": 134,
+      "minutos_desde_santiago": 80
+    },
+    {
+      "nombre": "Curicó",
+      "km_desde_santiago": 185,
+      "minutos_desde_santiago": 110
+    },
+    {
+      "nombre": "Talca",
+      "km_desde_santiago": 249,
+      "minutos_desde_santiago": 150
+    },
+    {
+      "nombre": "Linares",
+      "km_desde_santiago": 300,
+      "minutos_desde_santiago": 180
+    },
+    {
+      "nombre": "Parral",
+      "km_desde_santiago": 342,
+      "minutos_desde_santiago": 205
+    },
+    {
+      "nombre": "Chillán",
+      "km_desde_santiago": 398,
+      "minutos_desde_santiago": 240
+    }
+  ],
+  "horarios": {
+    "sur": {
+      "lunes_a_viernes": [
+        {
+          "Santiago": "07:30",
+          "Rancagua": "08:20",
+          "San Fernando": "08:50",
+          "Curicó": "09:20",
+          "Talca": "10:00",
+          "Linares": "10:30",
+          "Parral": "10:55",
+          "Chillán": "11:30"
+        },
+        {
+          "Santiago": "10:30",
+          "Rancagua": "11:20",
+          "San Fernando": "11:50",
+          "Curicó": "12:20",
+          "Talca": "13:00",
+          "Linares": "13:30",
+          "Parral": "13:55",
+          "Chillán": "14:30"
+        },
+        {
+          "Santiago": "14:00",
+          "Rancagua": "14:50",
+          "San Fernando": "15:20",
+          "Curicó": "15:50",
+          "Talca": "16:30",
+          "Linares": "17:00",
+          "Parral": "17:25",
+          "Chillán": "18:00"
+        },
+        {
+          "Santiago": "18:30",
+          "Rancagua": "19:20",
+          "San Fernando": "19:50",
+          "Curicó": "20:20",
+          "Talca": "21:00",
+          "Linares": "21:30",
+          "Parral": "21:55",
+          "Chillán": "22:30"
+        }
+      ],
+      "sabado_domingo_festivos": [
+        {
+          "Santiago": "08:30",
+          "Rancagua": "09:20",
+          "San Fernando": "09:50",
+          "Curicó": "10:20",
+          "Talca": "11:00",
+          "Linares": "11:30",
+          "Parral": "11:55",
+          "Chillán": "12:30"
+        },
+        {
+          "Santiago": "13:00",
+          "Rancagua": "13:50",
+          "San Fernando": "14:20",
+          "Curicó": "14:50",
+          "Talca": "15:30",
+          "Linares": "16:00",
+          "Parral": "16:25",
+          "Chillán": "17:00"
+        },
+        {
+          "Santiago": "17:30",
+          "Rancagua": "18:20",
+          "San Fernando": "18:50",
+          "Curicó": "19:20",
+          "Talca": "20:00",
+          "Linares": "20:30",
+          "Parral": "20:55",
+          "Chillán": "21:30"
+        }
+      ]
+    },
+    "norte": {
+      "lunes_a_viernes": [
+        {
+          "Santiago": "10:30",
+          "Rancagua": "09:40",
+          "San Fernando": "09:10",
+          "Curicó": "08:40",
+          "Talca": "08:00",
+          "Linares": "07:30",
+          "Parral": "07:05",
+          "Chillán": "06:30"
+        },
+        {
+          "Santiago": "14:00",
+          "Rancagua": "13:10",
+          "San Fernando": "12:40",
+          "Curicó": "12:10",
+          "Talca": "11:30",
+          "Linares": "11:00",
+          "Parral": "10:35",
+          "Chillán": "10:00"
+        },
+        {
+          "Santiago": "18:30",
+          "Rancagua": "17:40",
+          "San Fernando": "17:10",
+          "Curicó": "16:40",
+          "Talca": "16:00",
+          "Linares": "15:30",
+          "Parral": "15:05",
+          "Chillán": "14:30"
+        },
+        {
+          "Santiago": "22:00",
+          "Rancagua": "21:10",
+          "San Fernando": "20:40",
+          "Curicó": "20:10",
+          "Talca": "19:30",
+          "Linares": "19:00",
+          "Parral": "18:35",
+          "Chillán": "18:00"
+        }
+      ],
+      "sabado_domingo_festivos": [
+        {
+          "Santiago": "13:00",
+          "Rancagua": "12:10",
+          "San Fernando": "11:40",
+          "Curicó": "11:10",
+          "Talca": "10:30",
+          "Linares": "10:00",
+          "Parral": "09:35",
+          "Chillán": "09:00"
+        },
+        {
+          "Santiago": "17:30",
+          "Rancagua": "16:40",
+          "San Fernando": "16:10",
+          "Curicó": "15:40",
+          "Talca": "15:00",
+          "Linares": "14:30",
+          "Parral": "14:05",
+          "Chillán": "13:30"
+        },
+        {
+          "Santiago": "22:00",
+          "Rancagua": "21:10",
+          "San Fernando": "20:40",
+          "Curicó": "20:10",
+          "Talca": "19:30",
+          "Linares": "19:00",
+          "Parral": "18:35",
+          "Chillán": "18:00"
+        }
+      ]
+    }
+  },
+  "tarifas": {
+    "moneda": "CLP",
+    "nota": "Precio por pasajero y por tramo. La tarifa preferente no tiene descuento de estudiante.",
+    "tramos": [
+      {
+        "tramo": [
+          "Santiago",
+          "Rancagua"
+        ],
+        "estandar": 3300,
+        "preferente": 5300
+      },
+      {
+        "tramo": [
+          "Santiago",
+          "San Fernando"
+        ],
+        "estandar": 4400,
+        "preferente": 7000
+      },
+      {
+        "tramo": [
+          "Santiago",
+          "Curicó"
+        ],
+        "estandar": 5600,
+        "preferente": 9000
+      },
+      {
+        "tramo": [
+          "Santiago",
+          "Talca"
+        ],
+        "estandar": 7000,
+        "preferente": 11200
+      },
+      {
+        "tramo": [
+          "Santiago",
+          "Linares"
+        ],
+        "estandar": 8100,
+        "preferente": 13000
+      },
+      {
+        "tramo": [
+          "Santiago",
+          "Parral"
+        ],
+        "estandar": 9000,
+        "preferente": 14400
+      },
+      {
+        "tramo": [
+          "Santiago",
+          "Chillán"
+        ],
+        "estandar": 10300,
+        "preferente": 16500
+      },
+      {
+        "tramo": [
+          "Rancagua",
+          "San Fernando"
+        ],
+        "estandar": 2600,
+        "preferente": 4200
+      },
+      {
+        "tramo": [
+          "Rancagua",
+          "Curicó"
+        ],
+        "estandar": 3800,
+        "preferente": 6100
+      },
+      {
+        "tramo": [
+          "Rancagua",
+          "Talca"
+        ],
+        "estandar": 5200,
+        "preferente": 8300
+      },
+      {
+        "tramo": [
+          "Rancagua",
+          "Linares"
+        ],
+        "estandar": 6300,
+        "preferente": 10100
+      },
+      {
+        "tramo": [
+          "Rancagua",
+          "Parral"
+        ],
+        "estandar": 7200,
+        "preferente": 11500
+      },
+      {
+        "tramo": [
+          "Rancagua",
+          "Chillán"
+        ],
+        "estandar": 8500,
+        "preferente": 13600
+      },
+      {
+        "tramo": [
+          "San Fernando",
+          "Curicó"
+        ],
+        "estandar": 2600,
+        "preferente": 4200
+      },
+      {
+        "tramo": [
+          "San Fernando",
+          "Talca"
+        ],
+        "estandar": 4000,
+        "preferente": 6400
+      },
+      {
+        "tramo": [
+          "San Fernando",
+          "Linares"
+        ],
+        "estandar": 5200,
+        "preferente": 8300
+      },
+      {
+        "tramo": [
+          "San Fernando",
+          "Parral"
+        ],
+        "estandar": 6100,
+        "preferente": 9800
+      },
+      {
+        "tramo": [
+          "San Fernando",
+          "Chillán"
+        ],
+        "estandar": 7300,
+        "preferente": 11700
+      },
+      {
+        "tramo": [
+          "Curicó",
+          "Talca"
+        ],
+        "estandar": 2900,
+        "preferente": 4600
+      },
+      {
+        "tramo": [
+          "Curicó",
+          "Linares"
+        ],
+        "estandar": 4000,
+        "preferente": 6400
+      },
+      {
+        "tramo": [
+          "Curicó",
+          "Parral"
+        ],
+        "estandar": 5000,
+        "preferente": 8000
+      },
+      {
+        "tramo": [
+          "Curicó",
+          "Chillán"
+        ],
+        "estandar": 6200,
+        "preferente": 9900
+      },
+      {
+        "tramo": [
+          "Talca",
+          "Linares"
+        ],
+        "estandar": 2600,
+        "preferente": 4200
+      },
+      {
+        "tramo": [
+          "Talca",
+          "Parral"
+        ],
+        "estandar": 3500,
+        "preferente": 5600
+      },
+      {
+        "tramo": [
+          "Talca",
+          "Chillán"
+        ],
+        "estandar": 4800,
+        "preferente": 7700
+      },
+      {
+        "tramo": [
+          "Linares",
+          "Parral"
+        ],
+        "estandar": 2400,
+        "preferente": 3800
+      },
+      {
+        "tramo": [
+          "Linares",
+          "Chillán"
+        ],
+        "estandar": 3700,
+        "preferente": 5900
+      },
+      {
+        "tramo": [
+          "Parral",
+          "Chillán"
+        ],
+        "estandar": 2700,
+        "preferente": 4300
+      }
+    ],
+    "descuentos": {
+      "adulto": {
+        "porcentaje": 0,
+        "requisito": "sin requisito"
+      },
+      "estudiante": {
+        "porcentaje": 30,
+        "requisito": "TNE vigente; solo clase estándar"
+      },
+      "adulto_mayor": {
+        "porcentaje": 40,
+        "requisito": "60 años o más, con cédula de identidad"
+      },
+      "nino": {
+        "porcentaje": 50,
+        "requisito": "de 3 a 11 años"
+      }
+    },
+    "menores_de_3": "viajan gratis en brazos de un adulto, sin asiento propio"
+  },
+  "politicas": {
+    "compra": {
+      "canales": [
+        "web",
+        "app",
+        "boletería de cada estación"
+      ],
+      "medios_de_pago": "débito o crédito en web y app; efectivo solo en boletería",
+      "anticipacion_maxima_dias": 30,
+      "maximo_pasajes_por_compra": 6,
+      "datos_necesarios": [
+        "origen",
+        "destino",
+        "fecha",
+        "hora",
+        "pasajeros",
+        "tarifa",
+        "clase",
+        "rut",
+        "correo"
+      ],
+      "confirmacion": "el enlace de pago llega al correo del comprador y vence en 30 minutos"
+    },
+    "cambio": {
+      "plazo": "hasta 2 horas antes de la salida",
+      "cargo_por_pasaje": 1000,
+      "diferencia_tarifa": "si el viaje nuevo es más caro se paga la diferencia; si es más barato no se devuelve",
+      "cambios_permitidos": 1,
+      "datos_necesarios": [
+        "codigo_reserva",
+        "rut",
+        "fecha",
+        "hora"
+      ]
+    },
+    "devolucion": {
+      "tramos": [
+        {
+          "anticipacion": "24 horas o más antes de la salida",
+          "reembolso_porcentaje": 90
+        },
+        {
+          "anticipacion": "entre 24 y 2 horas antes de la salida",
+          "reembolso_porcentaje": 50
+        },
+        {
+          "anticipacion": "menos de 2 horas antes o después de la salida",
+          "reembolso_porcentaje": 0
+        }
+      ],
+      "plazo_reembolso": "10 días hábiles, al mismo medio de pago",
+      "datos_necesarios": [
+        "codigo_reserva",
+        "rut"
+      ]
+    },
+    "equipaje": {
+      "incluido": "1 maleta de hasta 23 kg y 1 bolso de mano de hasta 8 kg por pasajero",
+      "maleta_adicional": {
+        "precio": 3000,
+        "maximo": 1,
+        "nota": "por tramo"
+      },
+      "bicicletas": "solo plegadas y en su funda, como maleta"
+    },
+    "mascotas": {
+      "permitidas": "perros y gatos de hasta 8 kg en transportín cerrado",
+      "precio_por_tramo": 2500,
+      "maximo_por_pasajero": 1,
+      "perros_de_asistencia": "viajan gratis"
+    },
+    "estado_tren": "el asistente no tiene información en tiempo real; el estado de cada servicio se publica en www.rielsur.cl/estado y en el teléfono de atención",
+    "reclamos": {
+      "datos_necesarios": [
+        "rut",
+        "codigo_reserva",
+        "descripción"
+      ],
+      "plazo_respuesta": "5 días hábiles, por correo"
+    },
+    "accesibilidad": "rampa y espacio para silla de ruedas en el coche 2; hay que avisar con 48 horas de anticipación",
+    "servicios_a_bordo": "coche cafetería en todos los servicios"
+  },
+  "reservas": [
+    {
+      "codigo": "RS-10234",
+      "rut": "12345678-5",
+      "origen": "Santiago",
+      "destino": "Talca",
+      "fecha": "2026-12-04",
+      "hora": "10:30",
+      "pasajeros": 2,
+      "tarifa": "adulto",
+      "clase": "estandar",
+      "total": 14000
+    },
+    {
+      "codigo": "RS-20871",
+      "rut": "9876543-3",
+      "origen": "Chillán",
+      "destino": "Santiago",
+      "fecha": "2026-11-28",
+      "hora": "09:00",
+      "pasajeros": 1,
+      "tarifa": "adulto_mayor",
+      "clase": "estandar",
+      "total": 6180
+    },
+    {
+      "codigo": "RS-31502",
+      "rut": "19456321-3",
+      "origen": "Rancagua",
+      "destino": "Curicó",
+      "fecha": "2026-11-26",
+      "hora": "08:20",
+      "pasajeros": 1,
+      "tarifa": "estudiante",
+      "clase": "estandar",
+      "total": 2660
+    },
+    {
+      "codigo": "RS-44120",
+      "rut": "16783092-7",
+      "origen": "Santiago",
+      "destino": "Chillán",
+      "fecha": "2026-12-12",
+      "hora": "17:30",
+      "pasajeros": 3,
+      "tarifa": "adulto",
+      "clase": "preferente",
+      "total": 49500
+    },
+    {
+      "codigo": "RS-58077",
+      "rut": "20114587-2",
+      "origen": "Talca",
+      "destino": "Santiago",
+      "fecha": "2026-11-25",
+      "hora": "16:00",
+      "pasajeros": 2,
+      "tarifa": "adulto",
+      "clase": "estandar",
+      "total": 14000
+    }
+  ]
+}
