@@ -109,10 +109,23 @@ def grafico_respuestas(carpeta, salida):
     ax.set_xticklabels(nombres, fontsize=10)
     ax.set_ylim(0, 1.05)
     ax.yaxis.set_major_formatter(FuncFormatter(lambda y, _: f"{y * 100:.0f}%"))
+    # Para la versión que redacta con un LLM, también la cifra de la revisión a mano.
+    revision = cargar(RES / "revision_manual" / "llm_respuestas.json")
+    claves = [c for c, _ in SISTEMAS if cargar(carpeta / c / "metricas.json")]
+    i_manual = None
+    if revision and "llm_respuestas" in claves:
+        i = i_manual = claves.index("llm_respuestas")
+        tasa = revision["inventadas"] / revision["respuestas"]
+        ax.bar(i + 0.2, tasa, width=0.4, fill=False, hatch="//", edgecolor="#c8423b", label="Inventadas, revisión a mano")
+        ax.text(i + 0.2, tasa + 0.01, f"{tasa * 100:.0f}%", ha="center", fontsize=8)
     for i, (a, b) in enumerate(zip(menciones, inventadas)):
         ax.text(i - 0.2, a + 0.01, f"{a * 100:.0f}%", ha="center", fontsize=8)
-        ax.text(i + 0.2, b + 0.01, f"{b * 100:.0f}%", ha="center", fontsize=8)
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.13), ncol=2, frameon=False)
+        # Si encima va la barra de la revisión a mano, la cifra del detector va dentro de su barra.
+        if i == i_manual:
+            ax.text(i + 0.2, b / 2, f"{b * 100:.0f}%", ha="center", va="center", fontsize=8, color="white")
+        else:
+            ax.text(i + 0.2, b + 0.01, f"{b * 100:.0f}%", ha="center", fontsize=8)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.13), ncol=3, frameon=False)
     ax.grid(axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(salida, dpi=150)

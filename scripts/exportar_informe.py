@@ -19,6 +19,7 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10.5pt; line
 h1 { color: #1f3a5f; font-size: 22pt; border-bottom: 3px solid #e07a1f; padding-bottom: 6px; }
 h2 { color: #1f3a5f; font-size: 15pt; margin-top: 26px; }
 h3 { color: #1f3a5f; font-size: 12pt; }
+h2, h3 { break-after: avoid; }
 table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 9.5pt; page-break-inside: avoid; }
 th { background: #1f3a5f; color: white; padding: 6px; text-align: left; }
 td { border-bottom: 1px solid #ddd; padding: 5px 6px; }
